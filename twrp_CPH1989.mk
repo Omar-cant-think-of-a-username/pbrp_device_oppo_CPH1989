@@ -10,13 +10,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Twrp stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Inherit from CPH2001 device
 # $(call inherit-product, device/oppo/CPH1989/device.mk)
 
 PRODUCT_DEVICE := CPH1989
-PRODUCT_NAME := twrp_CPH1989
+PRODUCT_NAME := pbrp_CPH1989
 PRODUCT_BRAND := OPPO
 PRODUCT_MODEL := CPH1989
 PRODUCT_MANUFACTURER := oppo
