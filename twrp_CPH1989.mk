@@ -16,7 +16,7 @@ $(call inherit-product, vendor/pb/config/common.mk)
 # $(call inherit-product, device/oppo/CPH1989/device.mk)
 
 PRODUCT_DEVICE := CPH1989
-PRODUCT_NAME := pbrp_CPH1989
+PRODUCT_NAME := twrp_CPH1989
 PRODUCT_BRAND := OPPO
 PRODUCT_MODEL := CPH1989
 PRODUCT_MANUFACTURER := oppo
