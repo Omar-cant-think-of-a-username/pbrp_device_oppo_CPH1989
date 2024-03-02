@@ -155,8 +155,8 @@ BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 # TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
 
 # PBRP specific build flags
-PB_TORCH_PATH := /proc/qcom_flash
-PB_TORCH_MAX_BRIGHTNESS := 1
+# PB_TORCH_PATH := /proc/qcom_flash
+# PB_TORCH_MAX_BRIGHTNESS := 1
 
 # MTK Hardware 
  BOARD_HAS_MTK_HARDWARE := true 
