@@ -9,6 +9,7 @@
 /vendor_image	    emmc	/dev/block/by-name/vendor				  flags=backup=1;flashimg=1
 /md1img		    emmc	/dev/block/platform/bootdevice/by-name/md1img           flags=display="Modem";backup=1
 /persistent	    emmc	/dev/block/platform/bootdevice/by-name/frp              flags=display="Frp";backup=1
+/odm            ext4  /dev/block/by-name/odm          flags=display="Odm"
 /expdb		    emmc	/dev/block/platform/bootdevice/by-name/expdb
 /misc		    emmc	/dev/block/platform/bootdevice/by-name/para             flags=display="Parametr";backup=1
 /persist         ext4    /dev/block/by-name/persist
