@@ -105,7 +105,7 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
 # Related to Booting
 androidboot.selinux=permissive
-androidboot.boot_devices=bootdevice
+androidboot.boot_devices=bootdevice,soc/11230000.mmc,11230000.mmc,soc/11270000.ufshci,11270000.ufshci
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
