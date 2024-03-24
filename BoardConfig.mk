@@ -81,7 +81,7 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 # TARGET_COPY_OUT_ODM := odm
-TARGET_COPY_OUT_SYSTEM := system
+# TARGET_COPY_OUT_SYSTEM := system
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6771
@@ -101,17 +101,15 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_USES_MTP := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Related to Booting
-androidboot.boot_devices=bootdevice
+# androidboot.boot_devices=bootdevice
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS := metadata my_product my_heytap my_company my_preload my_stock my_carrier my_region my_engineering my_manifest
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2021-08-01
 
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
@@ -145,7 +143,7 @@ TARGET_USES_LOGD := true
 TW_EXCLUDE_APEX := true
 TARGET_USES_MKE2FS := true
 TW_USE_UFS := true
-TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
+# TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 # Crypto
 # TW_INCLUDE_CRYPTO := true
