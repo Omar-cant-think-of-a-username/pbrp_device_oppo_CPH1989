@@ -53,6 +53,8 @@
 
 /dev/block/by-name/spmfw /spmfw emmc defaults defaults
 
+/mnt/product/odm    /odm       none     ro,bind       wait,nofail,first_stage_mount
+
 
 
 
@@ -61,7 +63,6 @@
 /dev/block/by-name/odmdtbo /odmdtbo emmc defaults defaults
 /dev/block/by-name/dtbo /dtbo emmc defaults defaults
 
-/dev/block/by-name/odm /custom ext4 ro wait,verify,recoveryonly
 /dev/block/by-name/otp /otp emmc defaults defaults
 
 
