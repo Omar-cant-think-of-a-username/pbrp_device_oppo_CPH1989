@@ -53,7 +53,7 @@
 
 /dev/block/by-name/spmfw /spmfw emmc defaults defaults
 
-/mnt/product/odm    /odm       none     ro,bind       wait,nofail,first_stage_mount
+# /mnt/product/odm    /odm       none     ro,bind       wait,nofail,first_stage_mount
 
 
 
