@@ -52,9 +52,9 @@
 /dev/block/by-name/gz2 /gz2 emmc defaults defaults
 
 /dev/block/by-name/spmfw /spmfw emmc defaults defaults
-
-/mnt/product/odm    /odm       none     ro,bind       wait,nofail,first_stage_mount
-loop@/vendor/euclid/odm.img     /mnt/product/odm     ext4     ro   wait,nofail,first_stage_mount
+# tring to mount odm
+/mnt/product/odm                 /odm                emmc     ro wait,logical,first_stage_mount,nofail
+loop@/vendor/euclid/odm.img     /mnt/product/odm     ext4     ro wait,logical,first_stage_mount,nofail
 
 
 
