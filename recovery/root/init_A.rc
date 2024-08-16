@@ -6,7 +6,7 @@ on early-init
     restorecon /postinstall
 
     start ueventd
-  #  start healthd
+    start healthd
 
     setprop sys.usb.configfs 0
 
@@ -69,8 +69,8 @@ on init
     #ifndef VENDOR_EDIT
     #Yang.Li@ANDROID.STORAGE, 2017/12/19, Remove for can't umount /vendor in OTA update
     mkdir /mnt/vendor/persist/mcRegistry
-    mount ext4 /dev/block/platform/bootdevice/by-name/vendor  /vendor rw  # was commented out for some reason
-    mount ext4 /dev/block/platform/bootdevice/by-name/system  /system rw  # was commented out for some reason
+    #mount ext4 /dev/block/platform/bootdevice/by-name/vendor  /vendor rw
+    #mount ext4 /dev/block/platform/bootdevice/by-name/system  /system rw
     mkdir /mnt/vendor/persist
     mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
     #setprop vendor.gatekeeper.disable_spu true
@@ -138,8 +138,8 @@ service ueventd /system/bin/ueventd
     critical
     seclabel u:r:recovery:s0
 
-#service healthd /system/bin/android.hardware.health@2.1-service -r
- #   seclabel u:r:recovery:s0
+service healthd /system/bin/android.hardware.health@2.1-service -r
+    seclabel u:r:recovery:s0
 
 service charger /system/bin/charger
     seclabel u:r:recovery:s0
