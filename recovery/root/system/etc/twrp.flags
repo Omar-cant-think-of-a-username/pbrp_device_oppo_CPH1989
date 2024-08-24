@@ -21,7 +21,7 @@
 # /nvdata         ext4       /dev/block/platform/bootdevice/by-name/nvdata           flags=backup=1;display="Nvdata";flashimg=1
 # /nvcfg          ext4       /dev/block/platform/bootdevice/by-name/nvcfg            flags=backup=1;display="Nvcfg";flashimg=1
 # testing odm
-/odm              ext4       /dev/block/platform/bootdevice/by-name/odm         flags=backup=1;display="odmm";flashimg=1
+#/odm              ext4       /dev/block/platform/bootdevice/by-name/odm         flags=backup=1;display="odmm";flashimg=1
 /seccfg		    emmc	/dev/block/platform/bootdevice/by-name/seccfg
 /spmfw		    emmc	/dev/block/platform/bootdevice/by-name/spmfw            flags=display="Spm";backup=1
 /sspm_1		    emmc	/dev/block/platform/bootdevice/by-name/sspm_1           flags=backup=1;subpartitionof=/spmfw
