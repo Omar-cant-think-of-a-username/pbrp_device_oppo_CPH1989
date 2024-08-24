@@ -40,6 +40,42 @@ service hwservicemanager /system/bin/hwservicemanager
     writepid /dev/cpuset/system-background/tasks
     seclabel u:r:recovery:s0
 
+#testing
+on property:vendor.sys.listeners.registered=true
+    start keymaster-3-0
+
+on property:hwservicemanager.ready=true
+    start mobicore
+    start keymaster-3-0
+    start gatekeeper-1-0
+    start hal_cryptoeng_oppo
+
+on property:ro.crypto.state=unsupported
+    stop mobicore
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+    stop hal_cryptoeng_oppo
+    stop gatekeeperd
+    stop servicemanager
+    stop hwservicemanager
+
+on property:ro.crypto.state=unencrypted
+    stop mobicore
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+    stop hal_cryptoeng_oppo
+    stop gatekeeperd
+    stop servicemanager
+    stop hwservicemanager
+
+on property:twrp.decrypt.done=true
+    stop mobicore
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+    stop hal_cryptoeng_oppo
+    stop gatekeeperd
+    stop servicemanager
+    stop hwservicemanager
 
 # testing ↓
 on boot
