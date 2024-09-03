@@ -41,7 +41,7 @@ service hwservicemanager /system/bin/hwservicemanager
     seclabel u:r:recovery:s0
 
 #testing
-on property:vendor.sys.listeners.registered=true
+/* on property:vendor.sys.listeners.registered=true
     start keymaster-3-0
 
 on property:hwservicemanager.ready=true
@@ -76,6 +76,7 @@ on property:twrp.decrypt.done=true
     stop gatekeeperd
     stop servicemanager
     stop hwservicemanager
+*/
 
 # testing ↓
 on boot
