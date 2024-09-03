@@ -103,6 +103,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_USES_MTP := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS := metadata my_product my_heytap my_company my_preload my_stock my_carrier my_region my_engineering my_manifest
@@ -153,6 +154,16 @@ BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 # PBRP specific build flags
 PB_TORCH_PATH := "/proc/qcom_flash"
 PB_TORCH_MAX_BRIGHTNESS := 1
+
+#skyhawk
+SHRP_DEVICE_CODE := CPH1989
+SHRP_DARK := true
+SHRP_EDL_MODE := 0
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb-otg
+SHRP_FLASH := 1
+SHRP_FONP_1 := /proc/qcom_flash
 
 # MTK Hardware 
  BOARD_HAS_MTK_HARDWARE := true 
