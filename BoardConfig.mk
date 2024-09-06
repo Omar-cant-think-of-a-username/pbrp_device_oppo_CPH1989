@@ -156,13 +156,13 @@ PB_TORCH_PATH := "/proc/qcom_flash"
 PB_TORCH_MAX_BRIGHTNESS := 1
 
 #skyhawk
-#SHRP_DEVICE_CODE := CPH1989
-#SHRP_DARK := true
+SHRP_DEVICE_CODE := CPH1989
+SHRP_DARK := true
 #SHRP_EDL_MODE := 0
-#SHRP_EXTERNAL := /external_sd
-#SHRP_INTERNAL := /sdcard
-#SHRP_OTG := /usb-otg
-#SHRP_FLASH := 1
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb-otg
+SHRP_FLASH := 1
 #SHRP_FONP_1 := /proc/qcom_flash
 
 # MTK Hardware 
