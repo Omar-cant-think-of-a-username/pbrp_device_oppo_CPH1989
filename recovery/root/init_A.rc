@@ -138,8 +138,8 @@ service ueventd /system/bin/ueventd
     critical
     seclabel u:r:recovery:s0
 
-service healthd /system/bin/android.hardware.health@2.1-service -r
-    seclabel u:r:recovery:s0
+#service healthd /system/bin/android.hardware.health@2.1-service -r
+ #   seclabel u:r:recovery:s0
 
 service charger /system/bin/charger
     seclabel u:r:recovery:s0
