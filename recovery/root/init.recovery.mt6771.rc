@@ -79,18 +79,13 @@ service hwservicemanager /system/bin/hwservicemanager
 
 
 # testing ↓
-on early-init
-start health-hal-2-1
-service health-hal-2-1 /system/bin/android.hardware.health@2.1-service -r
-seclabel u:r:recovery:s0
-
 on boot
     start health-hal-2-1
-    start healthd
+   # start healthd
 
 # write /proc/touchpanel/double_tap_enable 1
 
-#service health-hal-2-1 /system/bin/android.hardware.health@2.1-service
-#seclabel u:r:recovery:s0
+service health-hal-2-1 /system/bin/android.hardware.health@2.1-service
+seclabel u:r:recovery:s0
   #  disabled
  #   user root
