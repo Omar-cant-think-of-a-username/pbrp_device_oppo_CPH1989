@@ -13,6 +13,7 @@ on fs && property:ro.debuggable=0
     start adbd
 
 on post-fs
+  start health-hal-2-1
     # Support A/B feature for EMMC and UFS boot region
     wait /dev/block/mmcblk0boot0 2
     symlink /dev/block/sda /dev/block/mmcblk0boot0
