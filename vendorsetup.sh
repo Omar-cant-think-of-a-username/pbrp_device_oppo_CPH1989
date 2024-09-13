@@ -1,1 +1,7 @@
 
+
+
+export OF_FL_PATH1="/proc/qcom_flash"
+export OF_FLASHLIGHT_ENABLE="1"
+export OF_DONT_PATCH_ENCRYPTED_DEVICE="1"
+export OF_DISABLE_MIUI_SPECIFIC_FEATURES="1"
