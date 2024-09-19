@@ -15,7 +15,6 @@ export OF_FBE_METADATA_MOUNT_IGNORE="1"
 export FOX_VERSION="R11.1"
 export FOX_BUILD_TYPE="Unofficial"
 
-#FOX_VERSION
 #OF_SUPPORT_OZIP_DECRYPTION" [NEW]
  #- Set this to 1 to enable support for Realme oZip decryption
  #- do not use this unless you know what you are doing (see below)
