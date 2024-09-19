@@ -1,8 +1,7 @@
 
 
 
-export OF_FL_PATH1="/proc/qcom_flash"
-export OF_FL_PATH2="/proc/qcom_flash"
+#export OF_FL_PATH1="/proc/qcom_flash"
 export OF_FLASHLIGHT_ENABLE="1"
 export OF_DONT_PATCH_ENCRYPTED_DEVICE="1"
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES="1"
@@ -12,6 +11,9 @@ export OF_USE_GREEN_LED="0"
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 export OF_USE_LEGACY_BATTERY_SERVICES="1"
 export OF_MAINTAINER="Omar & Seif"
+export OF_FBE_METADATA_MOUNT_IGNORE="1"
+export FOX_VERSION="R11.1"
+export FOX_BUILD_TYPE="Unofficial"
 
 #FOX_VERSION
 #OF_SUPPORT_OZIP_DECRYPTION" [NEW]
@@ -23,5 +25,5 @@ export OF_MAINTAINER="Omar & Seif"
  #- are updated to android 10, this feature is necessary only for downgrades to pie or below.
  #- default = 0
 
- #OF_FBE_METADATA_MOUNT_IGNORE
+ 
 
