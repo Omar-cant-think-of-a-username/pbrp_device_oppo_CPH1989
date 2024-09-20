@@ -9,6 +9,7 @@ export OF_DISABLE_MIUI_SPECIFIC_FEATURES="1"
 export OF_DISABLE_MIUI_OTA_BY_DEFAULT="1"
 export OF_KEEP_FORCED_ENCRYPTION="1"
 export OF_USE_GREEN_LED="0"
+export FOX_DISABLE_APP_MANAGER="0"
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 export OF_USE_LEGACY_BATTERY_SERVICES="1"
 export OF_MAINTAINER="Omar & Seif"
@@ -16,6 +17,8 @@ export OF_FBE_METADATA_MOUNT_IGNORE="1"
 export FOX_VERSION="R11.1"
 export FOX_BUILD_TYPE="Unofficial"
 export OF_SCREEN_H="2340"
+export OF_STATUS_INDENT_LEFT=40
+export OF_STATUS_INDENT_RIGHT=40
 
 #OF_SUPPORT_OZIP_DECRYPTION" [NEW]
  #- Set this to 1 to enable support for Realme oZip decryption
@@ -28,6 +31,7 @@ export OF_SCREEN_H="2340"
 
  #export FOX_DELETE_AROMAFM="1"
  #export FOX_ADVANCED_SECURITY="1"
+ 
 
  
 
