@@ -17,8 +17,8 @@ export OF_FBE_METADATA_MOUNT_IGNORE="1"
 export FOX_VERSION="R11.1"
 export FOX_BUILD_TYPE="Unofficial"
 export OF_SCREEN_H="2340"
-export OF_STATUS_INDENT_LEFT=40
-export OF_STATUS_INDENT_RIGHT=40
+export OF_STATUS_INDENT_LEFT=45
+export OF_STATUS_INDENT_RIGHT=45
 
 #OF_SUPPORT_OZIP_DECRYPTION" [NEW]
  #- Set this to 1 to enable support for Realme oZip decryption
