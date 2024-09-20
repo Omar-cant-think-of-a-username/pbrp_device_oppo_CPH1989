@@ -19,7 +19,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_DEVICE := CPH1989
 PRODUCT_NAME := twrp_CPH1989
-PRODUCT_BRAND := OPPO
+PRODUCT_BRAND := Oppo
 PRODUCT_MODEL := Reno 2F
 PRODUCT_MANUFACTURER := oppo
 
