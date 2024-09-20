@@ -9,7 +9,7 @@
 /vendor            ext4        /dev/block/by-name/vendor		  flags=backup=0;display="Vendor";wipeingui
 /md1img		    emmc	/dev/block/platform/bootdevice/by-name/md1img           flags=display="Modem";backup=1
 /persistent	    emmc	/dev/block/platform/bootdevice/by-name/frp              flags=display="Frp";backup=1
-/expdb		    emmc	/dev/block/platform/bootdevice/by-name/expdb
+/expdb		    emmc	/dev/block/platform/bootdevice/by-name/expdb             flagsbackup=1;flashimg=0
 /misc		    emmc	/dev/block/platform/bootdevice/by-name/para             flags=display="Para";backup=1
 /persist           ext4    /dev/block/by-name/persist                     flags=display="Persist";backup=1
 /metadata           ext4       /dev/block/platform/bootdevice/by-name/metadata    flags=display="Metadata";wipeingui
@@ -29,7 +29,7 @@
 /proinfo	    emmc	/dev/block/platform/bootdevice/by-name/proinfo          flags=display="Proinfo";backup=1
 /odmdtbo 	    emmc 	/dev/block/platform/bootdevice/by-name/odmdtbo
 /nvram              emmc       /dev/block/platform/bootdevice/by-name/nvram            flags=backup=1;display="Nvram";flashimg=1
-/lk               emmc	/dev/block/platform/bootdevice/by-name/lk               flags=display="Uboot";backup=1
+/lk               emmc	/dev/block/platform/bootdevice/by-name/lk               flags=display=lk";backup=1
 /lk2        emmc	/dev/block/platform/bootdevice/by-name/lk2              flags=backup=1;subpartitionof=/lk
 /logo		    emmc	/dev/block/platform/bootdevice/by-name/logo             flags=display="Logo";backup=1;flashimg=1
 /tee1		    emmc	/dev/block/platform/bootdevice/by-name/tee1             flags=display="Tee";backup=1
