@@ -67,5 +67,5 @@
 
 
 #Yang.Li@PSW.AD.Recovery.1122242, 2018/03/22, Add for critical log in mtk platform
-/dev/block/by-name/reserve2            /reserve2       emmc    defaults                                                      defaults
-/dev/block/by-name/opporeserve2                            /opporeserve    ext4    rw,seclabel,nosuid,nodev,noatime,data=ordered                 wait
+#/dev/block/by-name/reserve2            /reserve2       emmc    defaults                                                      defaults
+#/dev/block/by-name/opporeserve2                            /opporeserve    ext4    rw,seclabel,nosuid,nodev,noatime,data=ordered                 wait
