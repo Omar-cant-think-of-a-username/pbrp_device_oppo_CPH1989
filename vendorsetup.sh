@@ -19,6 +19,9 @@ export FOX_BUILD_TYPE="Unofficial"
 export OF_SCREEN_H="2340"
 export OF_STATUS_INDENT_LEFT=45
 export OF_STATUS_INDENT_RIGHT=45
+export FOX_ENABLE_APP_MANAGER=1
+export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v27.0.zip
+export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
 
 #OF_SUPPORT_OZIP_DECRYPTION" [NEW]
  #- Set this to 1 to enable support for Realme oZip decryption
@@ -31,6 +34,7 @@ export OF_STATUS_INDENT_RIGHT=45
 
  #export FOX_DELETE_AROMAFM="1"
  #export FOX_ADVANCED_SECURITY="1"
+ #export OF_DEFAULT_KEYMASTER_VERSION=4.1
  
 
  
