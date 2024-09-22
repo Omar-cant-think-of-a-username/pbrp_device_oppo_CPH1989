@@ -4,3 +4,6 @@ ro.board.platform=mt6771
 ro.treble.enabled=true
 ro.vndk.version=30
 ro.mediatek.platform=MT6771
+ro.crypto.uses_fs_ioc_add_encryption_key=true
+ro.vendor.mtk_trustonic_tee_support=1
+ro.crypto.volume.filenames_mode=aes-256-cts
