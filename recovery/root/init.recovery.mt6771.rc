@@ -63,7 +63,10 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
     -r /vendor/app/mcRegistry/5020170115e016302017012521300000.drbin \
     -r /odm/vendor/app/mcRegistry/09070000000000000000000000000000.drbin
     seclabel u:r:recovery:s0
-
+#for persist mounting and decryption too
+mkdir /mnt/vendor/persist/mcRegistry
+mkdir /mnt/vendor/persist
+mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
 
 
 #testing
