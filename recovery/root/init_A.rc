@@ -266,25 +266,7 @@ on property:sys.usb.config=fastboot && property:sys.usb.ffs.ready=1 && property:
 
 
 
-#removed all that shit that may relate to mtp
 
-#Add for OPPO FBE
-service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
-    seclabel u:r:recovery:s0
-
-service gatekeeperd /system/bin/gatekeeperd /data/misc/gatekeeper
-    seclabel u:r:recovery:s0
-
-service hal_cryptoeng_oppo /system/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service
-    seclabel u:r:recovery:s0
-
-service keymaster-3-0 /system/bin/android.hardware.keymaster@3.0-service.trustonic
-    seclabel u:r:recovery:s0
-
-service hwservicemanager /system/bin/hwservicemanager
-    onrestart setprop hwservicemanager.ready false
-    writepid /dev/cpuset/system-background/tasks
-    seclabel u:r:recovery:s0
 #xiaofan.yang@PSW.TECH.AgingTest, 2019/02/14,Add for factory agingtest
 #ifdef COLOROS_EDIT
 #Zhengkang.Ji@Plf.Framework, 2018.02.10 add for system repair
@@ -321,40 +303,8 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     oneshot
     seclabel u:r:recovery:s0
 
-service servicemanager /system/bin/servicemanager
-    group system readproc
-    writepid /dev/cpuset/system-background/tasks
-    seclabel u:r:recovery:s0
-
-service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry \
-    -r /vendor/app/mcRegistry/020f0000000000000000000000000000.drbin \
-    -r /vendor/app/mcRegistry/05120000000000000000000000000000.drbin \
-    -r /vendor/app/mcRegistry/020b0000000000000000000000000000.drbin \
-    -r /odm/vendor/app/mcRegistry/05070000000000000000000000000000.drbin \
-    -r /odm/vendor/app/mcRegistry/030b0000000000000000000000000000.drbin \
-    -r /odm/vendor/app/mcRegistry/030c0000000000000000000000000000.drbin \
-    -r /vendor/app/mcRegistry/07060000000000000000000000007169.drbin \
-    -r /vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.drbin \
-    -r /vendor/app/mcRegistry/06090000000000000000000000000000.drbin \
-    -r /vendor/app/mcRegistry/0f5eed3c3b5a47afacca69a84bf0efad.drbin \
-    -r /vendor/app/mcRegistry/07407000000000000000000000000000.drbin \
-    -r /vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.drbin \
-    -r /vendor/app/mcRegistry/6b3f5fa0f8cf55a7be2582587d62d63a.drbin \
-    -r /vendor/app/mcRegistry/5020170115e016302017012521300000.drbin \
-    -r /odm/vendor/app/mcRegistry/09070000000000000000000000000000.drbin
-    seclabel u:r:recovery:s0
-
 on property:recovery.reload.persist=trigger_reload_persist
     load_persist_props
-
-on property:enable.fbe.service=0
-    stop hal_cryptoeng_oppo
-    stop mobicore
-    stop servicemanager
-    stop hwservicemanager
-    stop keymaster-3-0
-    stop gatekeeperd
-    stop vendor.gatekeeper-1-0
 
 on property:vendor.connsys.driver.ready=yes
    insmod /vendor/lib/modules/wmt_chrdev_wifi.ko
