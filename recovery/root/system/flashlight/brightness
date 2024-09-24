@@ -1,1 +1,1 @@
-/proc/qcom_flash
+ln -sf /proc/qcom_flash
