@@ -5,10 +5,14 @@ on init
    write /proc/fastchg_fw_update 1
 
 #for persist mounting and decryption too
-mkdir /mnt/vendor/persist/mcRegistry
 mkdir /mnt/vendor/persist
+mkdir /mnt/vendor/persist/mcRegistry
 symlink /persist /mnt/vendor/persist
 mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+
+mkdir /dev/cpuset/foreground
+mkdir /dev/cpuset/system-background
+
 
 on fs && property:ro.debuggable=0
     # distinguish USB shoulde connect or not, i.e. CDP vs SDP
