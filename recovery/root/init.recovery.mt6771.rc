@@ -1,10 +1,14 @@
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 1
-# For Enabling DT2W
-   #write /proc/touchpanel/double_tap_enable 1
 # For Enabling VOOC Charging
    write /proc/fastchg_fw_update 1
+
+#for persist mounting and decryption too
+mkdir /mnt/vendor/persist/mcRegistry
+mkdir /mnt/vendor/persist
+symlink /persist /mnt/vendor/persist
+mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
 
 on fs && property:ro.debuggable=0
     # distinguish USB shoulde connect or not, i.e. CDP vs SDP
@@ -63,10 +67,8 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
     -r /vendor/app/mcRegistry/5020170115e016302017012521300000.drbin \
     -r /odm/vendor/app/mcRegistry/09070000000000000000000000000000.drbin
     seclabel u:r:recovery:s0
-#for persist mounting and decryption too
-mkdir /mnt/vendor/persist/mcRegistry
-mkdir /mnt/vendor/persist
-mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+
+
 
 
 #testing
