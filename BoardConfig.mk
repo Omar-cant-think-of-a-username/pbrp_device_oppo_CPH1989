@@ -105,7 +105,6 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 
 # Metadata
-BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS := metadata my_product my_heytap my_company my_preload my_stock my_carrier my_region my_engineering my_manifest
 
 
@@ -128,9 +127,13 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_NO_BATT_PERCENT := false
+
+# Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
-#TW_INCLUDE_FBE_METADATA_DECRYPT := false
+BOARD_USES_METADATA_PARTITION := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"    #needs to check on that path
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
@@ -159,12 +162,12 @@ PB_TORCH_MAX_BRIGHTNESS := 1
 #skyhawk
 SHRP_DEVICE_CODE := CPH1989
 SHRP_DARK := true
-#SHRP_EDL_MODE := 0
+SHRP_EDL_MODE := 0
 SHRP_EXTERNAL := /external_sd
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb-otg
 SHRP_FLASH := 1
-#SHRP_FONP_1 := /proc/qcom_flash
+SHRP_FONP_1 := /proc/qcom_flash
 
 # MTK Hardware 
  BOARD_HAS_MTK_HARDWARE := true 
