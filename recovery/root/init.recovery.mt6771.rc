@@ -1,4 +1,5 @@
 import /tee.rc
+import /trustonic.rc
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 1
@@ -105,6 +106,7 @@ on property:ro.crypto.state=unencrypted
     stop hwservicemanager
 
 on property:twrp.decrypt.done=true
+    setprop crypto.ready 0
     stop mobicore
     stop keymaster-3-0
     stop vendor.gatekeeper-1-0
