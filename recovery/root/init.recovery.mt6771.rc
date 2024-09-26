@@ -14,7 +14,6 @@ mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
 
 mkdir /dev/cpuset/foreground
 mkdir /dev/cpuset/system-background
-mkdir /data/misc/gatekeeper
 
 
 on fs && property:ro.debuggable=0
