@@ -34,7 +34,7 @@ export OF_STATUS_INDENT_RIGHT=48
 export FOX_USE_SPECIFIC_MAGISK_ZIP="~/Magisk/Magisk-27.0.zip"
 export OF_DEFAULT_KEYMASTER_VERSION="3.0"
 export OF_SKIP_FBE_DECRYPTION="1"
-export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
+export FOX_SETTINGS_ROOT_DIRECTORY="/persist"
 
 #OF_SUPPORT_OZIP_DECRYPTION" [NEW]
  #- Set this to 1 to enable support for Realme oZip decryption
