@@ -55,7 +55,6 @@
 # tring to mount odm
 #/mnt/product/odm                 /odm                emmc     ro wait,logical,first_stage_mount,nofail
 #loop@/vendor/euclid/odm.img     /mnt/product/odm     ext4     ro wait,logical,first_stage_mount,nofail
-/vendor/euclid/odm.img     /odm    ext4     ro wait,first_stage_mount,nofail
 
 
 /dev/block/by-name/boot_para /boot_para emmc defaults defaults
