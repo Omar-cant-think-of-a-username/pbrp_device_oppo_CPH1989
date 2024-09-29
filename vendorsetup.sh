@@ -19,11 +19,15 @@ export FOX_ENABLE_APP_MANAGER="1"
 export OF_ALLOW_DISABLE_NAVBAR="0"
 export FOX_USE_NANO_EDITOR="1"
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
+export OF_USE_TWRP_SAR_DETECT="1"
 export OF_USE_MAGISKBOOT="1"
 export OF_DONT_KEEP_LOG_HISTORY="1"
 export FOX_REMOVE_AAPT="1"
 export OF_USE_LEGACY_BATTERY_SERVICES="1"
 export OF_FBE_METADATA_MOUNT_IGNORE="1"
+export OF_QUICK_BACKUP_LIST="/boot;/dtbo"
+# ensure that /sdcard is bind-unmounted before f2fs data repair or format
+export OF_UNBIND_SDCARD_F2FS=1
 # about
 export OF_MAINTAINER="Omar"
 export FOX_VERSION="R11.1"
@@ -35,7 +39,7 @@ export OF_STATUS_INDENT_RIGHT=48
 export FOX_USE_SPECIFIC_MAGISK_ZIP="~/Magisk/Magisk-27.0.zip"
 #export OF_DEFAULT_KEYMASTER_VERSION="3.0"
 export OF_SKIP_FBE_DECRYPTION="1"
-export FOX_SETTINGS_ROOT_DIRECTORY="/persist"
+export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
 
 #OF_SUPPORT_OZIP_DECRYPTION" [NEW]
  #- Set this to 1 to enable support for Realme oZip decryption
@@ -48,7 +52,7 @@ export FOX_SETTINGS_ROOT_DIRECTORY="/persist"
 
  #export FOX_DELETE_AROMAFM="1"
  #export FOX_ADVANCED_SECURITY="1"
- #export OF_QUICK_BACKUP_LIST=
+ #export OF_QUICK_BACKUP_LIST="/boot;/metadata"
  #export FOX_DELETE_INITD_ADDON="1"
  #export OF_USE_TWRP_SAR_DETECT="1"
  #export OF_ENABLE_LPTOOLS="1"
