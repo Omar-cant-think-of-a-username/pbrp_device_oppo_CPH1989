@@ -1,7 +1,7 @@
 
 
 
-
+# Flashlight
 export OF_FLASHLIGHT_ENABLE="1"
 export OF_FL_PATH1="/system/flashlight"
 export OF_USE_GREEN_LED="0"
@@ -35,7 +35,7 @@ export OF_STATUS_INDENT_RIGHT=48
 export FOX_USE_SPECIFIC_MAGISK_ZIP="~/Magisk/Magisk-27.0.zip"
 export OF_DEFAULT_KEYMASTER_VERSION="3.0"
 export OF_SKIP_FBE_DECRYPTION="1"
-export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
+export FOX_SETTINGS_ROOT_DIRECTORY="/persist"
 
 #OF_SUPPORT_OZIP_DECRYPTION" [NEW]
  #- Set this to 1 to enable support for Realme oZip decryption
@@ -50,8 +50,10 @@ export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
  #export FOX_ADVANCED_SECURITY="1"
  #export OF_QUICK_BACKUP_LIST=
  #export FOX_DELETE_INITD_ADDON="1"
- #export OF_USE_TWRP_SAR_DETECT=1
- #export OF_ENABLE_LPTOOLS=1
+ #export OF_USE_TWRP_SAR_DETECT="1"
+ #export OF_ENABLE_LPTOOLS="1"
+ #FOX_INSTALLER_DISABLE_AUTOREBOOT="1"
+
  # ensure that /sdcard is bind-unmounted before f2fs data repair or format
 	#export OF_UNBIND_SDCARD_F2FS=1
  #
