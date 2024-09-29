@@ -6,8 +6,8 @@ export OF_FLASHLIGHT_ENABLE="1"
 export OF_FL_PATH1="/system/flashlight"
 export OF_USE_GREEN_LED="0"
 
-export OF_DONT_PATCH_ENCRYPTED_DEVICE="1"
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
+export OF_DONT_PATCH_ENCRYPTED_DEVICE="1"
 export OF_KEEP_FORCED_ENCRYPTION="1"
 # no special MIUI stuff
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES="1"
@@ -22,10 +22,8 @@ export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 export OF_USE_TWRP_SAR_DETECT="1"
 export OF_USE_MAGISKBOOT="1"
 export OF_DONT_KEEP_LOG_HISTORY="1"
-export FOX_REMOVE_AAPT="1"
 export OF_USE_LEGACY_BATTERY_SERVICES="1"
 export OF_FBE_METADATA_MOUNT_IGNORE="1"
-export OF_QUICK_BACKUP_LIST="/boot;/dtbo"
 # ensure that /sdcard is bind-unmounted before f2fs data repair or format
 export OF_UNBIND_SDCARD_F2FS=1
 # about
@@ -57,6 +55,7 @@ export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
  #export OF_USE_TWRP_SAR_DETECT="1"
  #export OF_ENABLE_LPTOOLS="1"
  #FOX_INSTALLER_DISABLE_AUTOREBOOT="1"
+ #export FOX_REMOVE_AAPT="1"
 
  # ensure that /sdcard is bind-unmounted before f2fs data repair or format
 	#export OF_UNBIND_SDCARD_F2FS=1
