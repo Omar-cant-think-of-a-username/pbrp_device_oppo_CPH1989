@@ -1,14 +1,7 @@
-on early-init
-    write /sys/module/musb_hdrc/parameters/kernel_init_done 1
 
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 1
-    setprop vendor.usb.controller "musb-hdrc"
-  #  setprop vendor.usb.acm_cnt 0
-  #  setprop vendor.usb.acm_port0 ""
-  #  setprop vendor.usb.acm_port1 ""
-  #  setprop vendor.usb.acm_enable 0
 
 
 on fs
@@ -40,27 +33,27 @@ on fs
 
 on boot
     write /config/usb_gadget/g1/idVendor 0x0E8D
- #  mkdir /config/usb_gadget/g1/functions/mtp.gs0     repeated
- #  write /config/usb_gadget/g1/os_desc/use 1         repeated
- #  write /config/usb_gadget/g1/os_desc/b_vendor_code 0x01
- #  write /config/usb_gadget/g1/os_desc/qw_sign "MSFT100"
- #  symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
+    mkdir /config/usb_gadget/g1/functions/mtp.gs0
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /config/usb_gadget/g1/os_desc/b_vendor_code 0x01
+    write /config/usb_gadget/g1/os_desc/qw_sign "MSFT100"
+    symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
 
-on property:sys.usb.config=adb && property:sys.usb.configfs=1
-    start adbd
+#on property:sys.usb.config=adb && property:sys.usb.configfs=1
+ #   start adbd
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=adb && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb"
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /config/usb_gadget/g1/idProduct 0x201C
-    setprop sys.usb.state ${sys.usb.config}
+ #   write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb"
+ #   symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
+ #   write /config/usb_gadget/g1/UDC ${sys.usb.controller}
+     write /config/usb_gadget/g1/idProduct 0x201C
+ #   setprop sys.usb.state ${sys.usb.config}
    
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=sideload && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idProduct 0x201C
 
-on property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
-    start adbd
+#on property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
+ #   start adbd
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
     setprop sys.usb.ffs.mtp.ready 1
