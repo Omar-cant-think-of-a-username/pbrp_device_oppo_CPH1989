@@ -17,14 +17,16 @@ export OF_DISABLE_MIUI_OTA_BY_DEFAULT="1"
 export FOX_DISABLE_APP_MANAGER="0"
 export FOX_ENABLE_APP_MANAGER="1"
 export OF_ALLOW_DISABLE_NAVBAR="0"
+export OF_USE_LEGACY_BATTERY_SERVICES="1"
 export FOX_USE_NANO_EDITOR="1"
-export OF_ENABLE_LPTOOLS="0"
+export FOX_REMOVE_AAPT="0"
+export FOX_USE_XZ_UTILS="1"
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
-export OF_USE_TWRP_SAR_DETECT="1"
+#export OF_USE_TWRP_SAR_DETECT="1"
 export OF_USE_MAGISKBOOT="1"
 export OF_DONT_KEEP_LOG_HISTORY="1"
-export OF_USE_LEGACY_BATTERY_SERVICES="1"
 export OF_FBE_METADATA_MOUNT_IGNORE="1"
+export FOX_INSTALLER_DISABLE_AUTOREBOOT="1"
 # ensure that /sdcard is bind-unmounted before f2fs data repair or format
 export OF_UNBIND_SDCARD_F2FS=1
 # about
@@ -57,6 +59,8 @@ export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
  #export OF_ENABLE_LPTOOLS="1"
  #FOX_INSTALLER_DISABLE_AUTOREBOOT="1"
  #export FOX_REMOVE_AAPT="1"
+ #FOX_USE_SED_BINARY
+ #OF_USE_HEXDUMP
 
  # ensure that /sdcard is bind-unmounted before f2fs data repair or format
 	#export OF_UNBIND_SDCARD_F2FS=1
