@@ -21,6 +21,8 @@ export OF_USE_LEGACY_BATTERY_SERVICES="1"
 export FOX_USE_NANO_EDITOR="1"
 export FOX_REMOVE_AAPT="0"
 export FOX_USE_XZ_UTILS="1"
+export FOX_USE_SED_BINARY="1"
+export OF_USE_HEXDUMP="1"
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 #export OF_USE_TWRP_SAR_DETECT="1"
 export OF_USE_MAGISKBOOT="1"
@@ -61,6 +63,11 @@ export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
  #export FOX_REMOVE_AAPT="1"
  #FOX_USE_SED_BINARY
  #OF_USE_HEXDUMP
+# "FOX_LOCAL_CALLBACK_SCRIPT"
+ #  - point to a custom "callback" script that will be executed just before creating the final recovery image
+  # - eg, a script to delete some files, or add some files to the ramdisk
+#FOX_RESET_SETTINGS
+#OF_SKIP_MULTIUSER_FOLDERS_BACKUP
 
  # ensure that /sdcard is bind-unmounted before f2fs data repair or format
 	#export OF_UNBIND_SDCARD_F2FS=1
