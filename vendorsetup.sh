@@ -33,8 +33,9 @@ export FOX_INSTALLER_DISABLE_AUTOREBOOT="1"
 export OF_UNBIND_SDCARD_F2FS=1
 # about
 export OF_MAINTAINER="Omar"
+export OF_MAINTAINER_AVATAR="device/oppo/CPH1989/maintainer.png"
 export FOX_VERSION="R11.1"
-export FOX_BUILD_TYPE="Beta"
+export FOX_BUILD_TYPE="Unofficial"
 
 export OF_SCREEN_H="2340"
 export OF_STATUS_INDENT_LEFT=48
