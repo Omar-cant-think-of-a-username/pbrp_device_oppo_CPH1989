@@ -131,10 +131,10 @@ TW_NO_BATT_PERCENT := false
 TW_EXCLUDE_NANO := false
 
 # Crypto
-TW_INCLUDE_CRYPTO := false
-TW_INCLUDE_CRYPTO_FBE := false
-BOARD_USES_METADATA_PARTITION := false
-TW_INCLUDE_FBE_METADATA_DECRYPT := false
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+BOARD_USES_METADATA_PARTITION := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"    #needs to check on that path
