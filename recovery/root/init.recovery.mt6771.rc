@@ -80,8 +80,8 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
 
 
 #testing
-on property:vendor.sys.listeners.registered=true
-    start keymaster-3-0
+#on property:vendor.sys.listeners.registered=true
+#    start keymaster-3-0
 
 on property:hwservicemanager.ready=true
     start mobicore
