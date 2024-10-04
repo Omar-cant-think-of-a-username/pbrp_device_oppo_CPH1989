@@ -48,6 +48,14 @@ service hal_cryptoeng_oppo /system/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-se
 service keymaster-3-0 /system/bin/android.hardware.keymaster@3.0-service.trustonic
     seclabel u:r:recovery:s0
 
+service keystore2 /system/bin/keystore2 /tmp/misc/keystore
+    class early_hal
+    user root
+    group keystore readproc log
+    disabled
+    writepid /dev/cpuset/foreground/tasks
+    seclabel u:r:recovery:s0
+
 service hwservicemanager /system/bin/hwservicemanager
     onrestart setprop hwservicemanager.ready false
     writepid /dev/cpuset/system-background/tasks
