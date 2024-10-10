@@ -8,7 +8,7 @@ on early-init
     start ueventd
    # start healthd
 
-    setprop sys.usb.configfs 0
+   # setprop sys.usb.configfs 0
 
 on init
     export PATH /sbin:/system/bin
