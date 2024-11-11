@@ -52,6 +52,7 @@ export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
 export OF_ADVANCED_SECURITY=1
 #for testing
 export OF_DISPLAY_FORMAT_FILESYSTEMS_DEBUG_INFO=1
+export OF_UNMOUNT_SDCARDS_BEFORE_REBOOT=1
 
 #OF_SUPPORT_OZIP_DECRYPTION" [NEW]
  #- Set this to 1 to enable support for Realme oZip decryption
@@ -67,15 +68,12 @@ export OF_DISPLAY_FORMAT_FILESYSTEMS_DEBUG_INFO=1
  #export FOX_DELETE_INITD_ADDON="1"
  #export OF_USE_TWRP_SAR_DETECT="1"
  #export OF_ENABLE_LPTOOLS="1"
- #FOX_INSTALLER_DISABLE_AUTOREBOOT="1"
- #export FOX_REMOVE_AAPT="1"
  #FOX_USE_SED_BINARY
  #OF_USE_HEXDUMP
 # "FOX_LOCAL_CALLBACK_SCRIPT"
  #  - point to a custom "callback" script that will be executed just before creating the final recovery image
   # - eg, a script to delete some files, or add some files to the ramdisk
 #FOX_RESET_SETTINGS
-#OF_SKIP_MULTIUSER_FOLDERS_BACKUP
 
  # ensure that /sdcard is bind-unmounted before f2fs data repair or format
 	#export OF_UNBIND_SDCARD_F2FS=1
@@ -95,7 +93,7 @@ export OF_DISPLAY_FORMAT_FILESYSTEMS_DEBUG_INFO=1
 #- It is up to you to verify for yourself that this is needed in the first place, and if used, that it works as expected
 #- default = 0
 
-#OF_UNMOUNT_SDCARDS_BEFORE_REBOOT
+
 
 
  
