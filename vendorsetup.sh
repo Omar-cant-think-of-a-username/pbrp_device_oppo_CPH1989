@@ -97,22 +97,22 @@ export OF_UNMOUNT_SDCARDS_BEFORE_REBOOT=1
 #TARGET_DEVICE_ALT
 #OF_REPORT_HARMLESS_MOUNT_ISSUES
 #"
-   - point to a custom temp directory for creating the zip installer
-   - ensure that this is a directory that you have write access to
-   - there is no default
+#   - point to a custom temp directory for creating the zip installer
+#   - ensure that this is a directory that you have write access to
+#   - there is no default
 #
-"FOX_PORTS_INSTALLER" 
-   - point to a custom directory for amended/additional installer files 
-   - the contents will simply be copied over before creating the zip installer
+#"FOX_PORTS_INSTALLER" 
+#   - point to a custom directory for amended/additional installer files 
+#   - the contents will simply be copied over before creating the zip installer
 
-"FOX_PORTS_TMP"
-   - point to a custom temp directory for creating the zip installer
-   - ensure that this is a directory that you have write access to
-   - there is no default
+#"FOX_PORTS_TMP"
+#   - point to a custom temp directory for creating the zip installer
+#  - ensure that this is a directory that you have write access to
+#   - there is no default
 #
-"FOX_PORTS_INSTALLER" 
-   - point to a custom directory for amended/additional installer files 
-   - the contents will simply be copied over before creating the zip installer
+#"FOX_PORTS_INSTALLER" 
+#   - point to a custom directory for amended/additional installer files 
+#   - the contents will simply be copied over before creating the zip installer
 
 
 
