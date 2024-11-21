@@ -1,5 +1,5 @@
-import /tee.rc
-import /trustonic.rc
+#import /tee.rc
+#import /trustonic.rc
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 1
@@ -43,25 +43,25 @@ service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-ser
 service gatekeeperd /system/bin/gatekeeperd /data/misc/gatekeeper
     seclabel u:r:recovery:s0
 
-service hal_cryptoeng_oppo /system/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service
-    seclabel u:r:recovery:s0
+#service hal_cryptoeng_oppo /system/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service
+#    seclabel u:r:recovery:s0
 
-service keymaster-3-0 /system/bin/android.hardware.keymaster@3.0-service.trustonic
-    seclabel u:r:recovery:s0
+#service keymaster-3-0 /system/bin/android.hardware.keymaster@3.0-service.trustonic
+#    seclabel u:r:recovery:s0
 
-service wait_for_keymaster /system/bin/wait_for_keymaster
-    user root
-    group root system
-    priority -20
-    ioprio rt 0
-    seclabel u:r:recovery:s0
+#service wait_for_keymaster /system/bin/wait_for_keymaster
+#    user root
+#    group root system
+#    priority -20
+#    ioprio rt 0
+#    seclabel u:r:recovery:s0
 
-service keystore /system/bin/keystore /data/misc/keystore
-    class main
-    user keystore
-    group keystore drmrpc readproc log
-    writepid /dev/cpuset/foreground/tasks
-    seclabel u:r:recovery:s0
+#service keystore /system/bin/keystore /data/misc/keystore
+#    class main
+#    user keystore
+#    group keystore drmrpc readproc log
+#    writepid /dev/cpuset/foreground/tasks
+#    seclabel u:r:recovery:s0
 
 service hwservicemanager /system/bin/hwservicemanager
     onrestart setprop hwservicemanager.ready false
@@ -98,11 +98,11 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
 #on property:vendor.sys.listeners.registered=true
 #    start keymaster-3-0
 
-on property:hwservicemanager.ready=true
-    start mobicore
-    start keymaster-3-0
-    start vendor.gatekeeper-1-0
-    start hal_cryptoeng_oppo
+#on property:hwservicemanager.ready=true
+ #   start mobicore
+ #   start keymaster-3-0
+ #   start vendor.gatekeeper-1-0
+ #   start hal_cryptoeng_oppo
 
 on property:ro.crypto.state=unsupported
     stop mobicore
