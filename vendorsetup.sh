@@ -29,7 +29,7 @@ export FOX_USE_GREP_BINARY="1"
 #export OF_USE_HEXDUMP="1" obselote
 # for oppo/realme ozip decryption
 export OF_SUPPORT_OZIP_DECRYPTION=1
-export TW_OZIP_DECRYPT_KEY="0000"
+#export TW_OZIP_DECRYPT_KEY="0000"
 
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 #export OF_USE_TWRP_SAR_DETECT="1"
