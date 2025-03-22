@@ -1,12 +1,16 @@
 ro.display.series=Oppo Reno2 F
 ro.product.board=mt6771
 ro.board.platform=mt6771
+ro.mediatek.platform=MT6771
 ro.treble.enabled=true
 ro.vndk.version=30
+
+#for ota updates
 ro.product.device=OP4C4B
 ro.product.product.device=OP4C4B
 ro.product.name=CPH1989
-ro.mediatek.platform=MT6771
+ro.commonsoft.ota=OP4C4B
+
 #ro.crypto.uses_fs_ioc_add_encryption_key=true
 #ro.vendor.mtk_trustonic_tee_support=1
 #ro.crypto.volume.filenames_mode=aes-256-cts
