@@ -41,7 +41,7 @@ export FOX_INSTALLER_DISABLE_AUTOREBOOT="1"
 export OF_UNBIND_SDCARD_F2FS=1 # needs testing
 # about
 export OF_MAINTAINER="Omar"
-export FOX_MAINTAINER_PATCH_VERSION="R11.1"
+#export FOX_MAINTAINER_PATCH_VERSION="R11.1"
 export FOX_BUILD_TYPE="Unofficial"
 
 export OF_SCREEN_H="2340"
