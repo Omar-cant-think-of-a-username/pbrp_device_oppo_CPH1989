@@ -38,7 +38,7 @@ export OF_DONT_KEEP_LOG_HISTORY="1"
 export OF_FBE_METADATA_MOUNT_IGNORE="1"
 export FOX_INSTALLER_DISABLE_AUTOREBOOT="1"
 # ensure that /sdcard is bind-unmounted before f2fs data repair or format
-export OF_UNBIND_SDCARD_F2FS=1 # needs testing
+#export OF_UNBIND_SDCARD_F2FS=1 # needs testing
 # about
 export OF_MAINTAINER="Omar"
 #export FOX_MAINTAINER_PATCH_VERSION="R11.1"
@@ -54,6 +54,7 @@ export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
 export OF_ADVANCED_SECURITY=1
 
 export OF_UNMOUNT_SDCARDS_BEFORE_REBOOT=1
+export FOX_MISCELLANEOUS_ROOT_DIRECTORY="/data/media/OFRP"
 
 #OF_SUPPORT_OZIP_DECRYPTION" [NEW]
  #- Set this to 1 to enable support for Realme oZip decryption
