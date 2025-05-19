@@ -88,11 +88,11 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
 
 #testing
 
-#on property:hwservicemanager.ready=true
- #   start mobicore
- #   start keymaster-3-0
- #   start vendor.gatekeeper-1-0
- #   start hal_cryptoeng_oppo
+on property:hwservicemanager.ready=true
+    start mobicore
+    start keymaster-3-0
+    start vendor.gatekeeper-1-0
+    start hal_cryptoeng_oppo
 
 on property:ro.crypto.state=unsupported
     stop mobicore
