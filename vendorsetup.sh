@@ -36,7 +36,7 @@ export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 export OF_USE_MAGISKBOOT="1"
 export OF_DONT_KEEP_LOG_HISTORY="1"
 export OF_FBE_METADATA_MOUNT_IGNORE="1"
-export FOX_INSTALLER_DISABLE_AUTOREBOOT="1"
+export FOX_INSTALLER_DISABLE_AUTOREBOOT="0"
 # ensure that /sdcard is bind-unmounted before f2fs data repair or format
 #export OF_UNBIND_SDCARD_F2FS=1 # needs testing
 # about
