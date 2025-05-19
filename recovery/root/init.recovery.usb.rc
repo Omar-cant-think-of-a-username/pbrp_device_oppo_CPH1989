@@ -1,8 +1,7 @@
 
 on init
     setprop sys.usb.configfs 1
-#    setprop sys.usb.ffs.aio_compat 1
-
+    setprop sys.usb.ffs.aio_compat 1
 
 on fs
 #all fs from realme u1 tree
