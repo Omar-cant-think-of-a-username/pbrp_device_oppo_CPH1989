@@ -22,8 +22,8 @@ PRODUCT_PACKAGES_ENG += \
 PRODUCT_TARGET_VNDK_VERSION := 30
 
 # Keystore2
-PRODUCT_PACKAGES += \
-    android.system.keystore2
+#PRODUCT_PACKAGES += \
+#    android.system.keystore2
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
