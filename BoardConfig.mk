@@ -132,9 +132,9 @@ TW_EXCLUDE_NANO := false
 TW_USE_TOOLBOX := true
 
 # Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-BOARD_USES_METADATA_PARTITION := true
+TW_INCLUDE_CRYPTO := false
+TW_INCLUDE_CRYPTO_FBE := false
+BOARD_USES_METADATA_PARTITION := false
 #TW_INCLUDE_FBE_METADATA_DECRYPT := false
 
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
