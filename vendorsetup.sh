@@ -57,14 +57,7 @@ export OF_ADVANCED_SECURITY=1
 export OF_UNMOUNT_SDCARDS_BEFORE_REBOOT=1
 
 
-#OF_SUPPORT_OZIP_DECRYPTION" [NEW]
- #- Set this to 1 to enable support for Realme oZip decryption
- #- do not use this unless you know what you are doing (see below)
- #- if this is enabled, you must also set "TW_OZIP_DECRYPT_KEY"
- #- Note: This is NOT required for realme devices that are released with android 10 or above, since realme has added 
- #- the decryptor inside of the updater binary removing the necessity for an external decryptor. For devices that
- #- are updated to android 10, this feature is necessary only for downgrades to pie or below.
- #- default = 0
+
 
  
  #export OF_QUICK_BACKUP_LIST="/boot;/metadata"
@@ -79,15 +72,6 @@ export OF_UNMOUNT_SDCARDS_BEFORE_REBOOT=1
  # ensure that /sdcard is bind-unmounted before f2fs data repair or format
 	#export OF_UNBIND_SDCARD_F2FS=1
  #OF_NO_SPLASH_CHANGE
- 
- #"OF_SPLASH_MAX_SIZE"
-#- use this to specify the maximum size (in kilobytes) of image files that can safely be used for splash images
-#- on some devices, the maximum safe size is 65 Kb; on others, the images can be very big (eg, megabytes)
-#- Note: verify that the maximum value you set is not too big (ie, test it yourself)
-#- if the splash image chosen by the user is too big, this can easily cause a "System is destroyed" scenario
-#- in that case, the user will need to flash the recovery image again, via fastboot
-#- eg, "export OF_SPLASH_MAX_SIZE=128" (ie, 128 Kb maximum)
-#- default = 4096 (ie, 4mb maximum)
 
 #OF_WIPE_METADATA_AFTER_DATAFORMAT" [NEW] [EXPERIMENTAL!!]
 #- Set to 1 to automatically wipe /metadata after formatting the data partition
