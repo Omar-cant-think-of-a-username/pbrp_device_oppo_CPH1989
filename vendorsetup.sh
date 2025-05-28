@@ -81,7 +81,6 @@ export OF_UNMOUNT_SDCARDS_BEFORE_REBOOT=1
 #- default = 0
 
 #OF_DONT_KEEP_LOG_HISTORY"
-#TARGET_DEVICE_ALT
 #OF_REPORT_HARMLESS_MOUNT_ISSUES
 #"
 #   - point to a custom temp directory for creating the zip installer
