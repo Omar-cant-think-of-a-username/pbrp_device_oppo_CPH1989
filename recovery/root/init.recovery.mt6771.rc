@@ -6,6 +6,20 @@ on fs
     mkdir /mnt/vendor/persist 0777 system system
     setprop crypto.ready 1
 
+service keystore_auth /system/bin/keystore_auth
+    oneshot
+    user system
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service keystore /system/bin/keystore /tmp/misc/keystore
+    user root
+    group root drmrpc readproc
+    disabled
+    seclabel u:r:recovery:s0
+
+
 on init
    # setprop sys.usb.configfs 1
    # setprop sys.usb.ffs.aio_compat 1
@@ -48,16 +62,25 @@ on post-fs
     exec u:r:update_engine:s0 root root -- /system/bin/mtk_plpath_utils
 
 #Add for OPPO FBE
-service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
+service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
+    user root
+    group root
+    disabled
     seclabel u:r:recovery:s0
 
-service gatekeeperd /system/bin/gatekeeperd /data/misc/gatekeeper
-    seclabel u:r:recovery:s0
+#service gatekeeperd /system/bin/gatekeeperd /data/misc/gatekeeper
+ #   seclabel u:r:recovery:s0
 
 service hal_cryptoeng_oppo /system/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service
+     user root
+    group root drmrpc
+    disabled
     seclabel u:r:recovery:s0
 
 service keymaster-3-0 /system/bin/android.hardware.keymaster@3.0-service.trustonic
+    user root
+    group root drmrpc
+    disabled
     seclabel u:r:recovery:s0
 
 
@@ -87,46 +110,52 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
     -r /vendor/app/mcRegistry/6b3f5fa0f8cf55a7be2582587d62d63a.drbin \
     -r /vendor/app/mcRegistry/5020170115e016302017012521300000.drbin \
     -r /odm/vendor/app/mcRegistry/09070000000000000000000000000000.drbin
+    user root
+    group root
+    disabled
     seclabel u:r:recovery:s0
-
-
 
 
 #testing
 
 on property:hwservicemanager.ready=true
+    start hal_cryptoeng_oppo
     start mobicore
     start keymaster-3-0
-    start vendor.gatekeeper-1-0
-    start hal_cryptoeng_oppo
+    start gatekeeper-1-0
 
 on property:ro.crypto.state=unsupported
-    stop mobicore
-    stop keymaster-3-0
-    stop vendor.gatekeeper-1-0
     stop hal_cryptoeng_oppo
-    stop gatekeeperd
+    stop mobicore
     stop servicemanager
     stop hwservicemanager
+    stop keymaster-3-0
+    stop gatekeeper-1-0
 
 on property:ro.crypto.state=unencrypted
-    stop mobicore
-    stop keymaster-3-0
-    stop vendor.gatekeeper-1-0
     stop hal_cryptoeng_oppo
-    stop gatekeeperd
+    stop mobicore
     stop servicemanager
     stop hwservicemanager
+    stop keymaster-3-0
+    stop gatekeeper-1-0
 
 on property:twrp.decrypt.done=true
-    setprop crypto.ready 0
-    stop mobicore
-    stop keymaster-3-0
-    stop vendor.gatekeeper-1-0
     stop hal_cryptoeng_oppo
-    stop gatekeeperd
+    stop mobicore
     stop servicemanager
     stop hwservicemanager
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+#    
+on property:enable.fbe.service=0
+    stop hal_cryptoeng_oppo
+    stop mobicore
+    stop servicemanager
+    stop hwservicemanager
+    stop keymaster-3-0
+    stop gatekeeperd
+    stop vendor.gatekeeper-1-0    
 
 
 # testing ↓
