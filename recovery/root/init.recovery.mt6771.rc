@@ -1,5 +1,11 @@
 import /tee.rc
 import /trustonic.rc
+
+on fs
+    install_keyring
+    mkdir /mnt/vendor/persist 0777 system system
+    setprop crypto.ready 1
+
 on init
    # setprop sys.usb.configfs 1
    # setprop sys.usb.ffs.aio_compat 1
