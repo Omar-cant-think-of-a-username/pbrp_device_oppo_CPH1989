@@ -10,6 +10,7 @@ ro.product.device=OP4C4B
 ro.product.product.device=OP4C4B
 ro.product.name=CPH1989
 ro.commonsoft.ota=OP4C4B
+ro.separate.soft=19533
 
 #ro.crypto.uses_fs_ioc_add_encryption_key=true
 #ro.vendor.mtk_trustonic_tee_support=1
