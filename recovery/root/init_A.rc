@@ -71,8 +71,8 @@ on init
     mkdir /mnt/vendor/persist/mcRegistry
     #mount ext4 /dev/block/platform/bootdevice/by-name/vendor  /vendor rw
     #mount ext4 /dev/block/platform/bootdevice/by-name/system  /system rw
-    mkdir /mnt/vendor/persist
-    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+    #mkdir /mnt/vendor/persist
+    #mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
     #setprop vendor.gatekeeper.disable_spu true
     #endif /* VENDOR_EDIT */
     #ifdef OPLUS_FEATURE_PHOENIX_RECOVERY
