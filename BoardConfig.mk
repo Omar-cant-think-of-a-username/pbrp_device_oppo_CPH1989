@@ -137,7 +137,7 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_USE_FSCRYPT_POLICY := 2
 BOARD_USES_METADATA_PARTITION := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := false
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"    #needs to check on that path
