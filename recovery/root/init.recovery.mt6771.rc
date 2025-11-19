@@ -1,6 +1,18 @@
 import /tee.rc
 import /trustonic.rc
 
+on init
+#for persist mounting and decryption too
+#mkdir /mnt/vendor/persist
+#mkdir /mnt/vendor/persist/mcRegistry
+symlink /persist /mnt/vendor/persist
+mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+setprop persist.sys.firstlaunch false
+
+mkdir /dev/cpuset/foreground
+mkdir /dev/cpuset/system-background
+mkdir /data/misc/gatekeeper
+
 on fs
     install_keyring
     mkdir /mnt/vendor/persist 0777 system system
@@ -18,23 +30,6 @@ service keystore /system/bin/keystore /tmp/misc/keystore
     group root drmrpc readproc
     disabled
     seclabel u:r:recovery:s0
-
-
-on init
-   # setprop sys.usb.configfs 1
-   # setprop sys.usb.ffs.aio_compat 1
-# For Enabling VOOC Charging
-   write /proc/fastchg_fw_update 1
-
-#for persist mounting and decryption too
-#mkdir /mnt/vendor/persist
-#mkdir /mnt/vendor/persist/mcRegistry
-symlink /persist /mnt/vendor/persist
-mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
-
-mkdir /dev/cpuset/foreground
-mkdir /dev/cpuset/system-background
-mkdir /data/misc/gatekeeper
 
 
 on fs && property:ro.debuggable=0
