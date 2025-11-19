@@ -64,11 +64,11 @@ on init
     exec /sbin/e2fsck -y /dev/block/platform/mtk-msdc.0/by-name/userdata
 
     #mount ext4 /dev/block/bootdevice/by-name/userdata /data rw
-    setprop persist.sys.firstlaunch false
+    #setprop persist.sys.firstlaunch false
 
     #ifndef VENDOR_EDIT
     #Yang.Li@ANDROID.STORAGE, 2017/12/19, Remove for can't umount /vendor in OTA update
-    mkdir /mnt/vendor/persist/mcRegistry
+    #mkdir /mnt/vendor/persist/mcRegistry
     #mount ext4 /dev/block/platform/bootdevice/by-name/vendor  /vendor rw
     #mount ext4 /dev/block/platform/bootdevice/by-name/system  /system rw
     #mkdir /mnt/vendor/persist
