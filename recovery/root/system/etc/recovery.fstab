@@ -38,6 +38,8 @@
 /dev/block/by-name/sspm_1 /sspm_1 emmc defaults defaults
 /dev/block/by-name/sspm_2 /sspm_2 emmc defaults defaults
 
+/dev/block/by-name/persist                         /mnt/vendor/persist  ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc
+
 
 /dev/block/by-name/md1img /md1img emmc defaults defaults
 /dev/block/by-name/md1dsp /md1dsp emmc defaults defaults
