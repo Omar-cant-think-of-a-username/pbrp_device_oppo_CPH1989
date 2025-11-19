@@ -3,8 +3,8 @@ on init
    # mkdir /mnt/vendor/persist 0771 system system
 
 on post-fs
-    chown system system /mnt/vendor/persist
-    chmod 0771 /mnt/vendor/persist
+   # chown system system /mnt/vendor/persist
+    #chmod 0771 /mnt/vendor/persist
 
     # We restorecon /mnt/vendor/persist to set SEPolicy label.
     #restorecon /mnt/vendor/persist
