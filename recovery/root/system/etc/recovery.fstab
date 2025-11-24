@@ -9,7 +9,8 @@
 
 /dev/block/by-name/vendor /vendor ext4  ro  wait,,avb,,first_stage_mount
 
-/dev/block/by-name/userdata /data ext4 noatime,nosuid,nodev,noauto_da_alloc,async_discard,defrag=on,errors=panic,inlinecrypt wait,check,formattable,quota,latemount,resize,reservedsize=128m,,fileencryption=aes-256-xts:aes-256-cts:v1
+/dev/block/by-name/userdata /data ext4 noatime,nosuid,nodev,noauto_da_alloc,async_discard,defrag=on,errors=panic,inlinecrypt wait,check,formattable,quota,latemount,resize,reservedsize=128m,,fileencryption=aes-256-xts:aes-256-cts:v1,keydirectory=/data/unencrypted/key
+
 
 /dev/block/sdc41 /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
 
