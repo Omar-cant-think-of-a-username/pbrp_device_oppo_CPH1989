@@ -4,7 +4,7 @@
 /system_image       emmc        /dev/block/by-name/system				  flags=backup=1;flashimg=1
 /system_root        ext         /dev/block/by-name/system         flags=display="System";wipeingui;backup=0
 /cache		    ext4	/dev/block/platform/bootdevice/by-name/cache
-/data		    ext4	/dev/block/platform/bootdevice/by-name/userdata  flags=fileencryption=aes-256-xts
+/data		    ext4	/dev/block/platform/bootdevice/by-name/userdata 
 /vendor_image	    emmc	/dev/block/by-name/vendor				  flags=backup=1;flashimg=1
 /vendor             ext4        /dev/block/by-name/vendor		  flags=backup=0;display="Vendor";wipeingui
 /md1img		    emmc	/dev/block/platform/bootdevice/by-name/md1img           flags=display="Modem";backup=1
