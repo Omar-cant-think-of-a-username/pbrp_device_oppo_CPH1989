@@ -1,5 +1,4 @@
 import /tee.rc
-import /trustonic.rc
 
 on init
 #for persist mounting and decryption too
