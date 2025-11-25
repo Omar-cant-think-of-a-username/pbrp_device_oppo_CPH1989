@@ -14,7 +14,7 @@
 
 /dev/block/sdc41 /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
 
-/dev/block/by-name/persist /mnt/vendor/persist ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
+/dev/block/by-name/persist /persist ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
 
 
 /dev/block/by-name/frp /persistent emmc defaults defaults
