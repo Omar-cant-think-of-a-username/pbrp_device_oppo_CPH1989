@@ -8,7 +8,7 @@ setprop persist.sys.firstlaunch false
 
 mkdir /dev/cpuset/foreground
 mkdir /dev/cpuset/system-background
-mkdir /data/misc/gatekeeper
+
 
 on fs
     install_keyring
@@ -150,6 +150,7 @@ on property:enable.fbe.service=0
 
 on boot
     start health-hal-2-1
+    mkdir /data/misc/gatekeeper
 
 service health-hal-2-1 /system/bin/android.hardware.health@2.1-service
     disabled
