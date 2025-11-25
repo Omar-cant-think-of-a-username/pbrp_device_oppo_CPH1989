@@ -106,7 +106,7 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
     seclabel u:r:recovery:s0
 
 
-#testing
+#For decryption
 
 on property:hwservicemanager.ready=true
     start hal_cryptoeng_oppo
@@ -145,7 +145,7 @@ on property:enable.fbe.service=0
     stop hwservicemanager
     stop keymaster-3-0
     stop gatekeeperd
-    stop vendor.gatekeeper-1-0    
+    stop gatekeeper-1-0  
 
 
 on boot
