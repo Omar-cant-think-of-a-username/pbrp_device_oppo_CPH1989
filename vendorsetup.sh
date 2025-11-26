@@ -43,7 +43,7 @@ export OF_MAINTAINER="Omar"
 export FOX_BUILD_TYPE="Unofficial"
 export TARGET_DEVICE_ALT="OP4C4B"
 #export FOX_MAINTAINER_PATCH_VERSION="R11.1"
-export FOX_VARIANT="FBE"
+#export FOX_VARIANT="FBE"
 
 export OF_SCREEN_H="2340"
 export OF_STATUS_INDENT_LEFT=48
@@ -54,11 +54,20 @@ export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
 #export FOX_MISCELLANEOUS_ROOT_DIRECTORY="/data/media/OFRP"
 
 export OF_ADVANCED_SECURITY=1
-export OF_UNMOUNT_SDCARDS_BEFORE_REBOOT=1
+
+
+#"OF_FORCE_USE_RECOVERY_FSTAB" [NEW] (renamed from OF_LEGACY_PROCESS_FSTAB")
+#- If decryption fails on an Mtk device when it was working before, try setting this to 1 to bypass processing of ROM fstabs, and only use the recovery's fstab
+#- This var is equivalent to setting "TW_SKIP_ADDITIONAL_FSTAB := true" in BoardConfig.mk or device.mk
+#- This should not be used unless absolutely necessary
+#- default = 0
+
+#export OF_UNMOUNT_SDCARDS_BEFORE_REBOOT=1
 
 
 
-
+#export OF_SKIP_FBE_DECRYPTION_SDKVERSION=30
+#OF_SPLASH_MAX_SIZE
  
  #export OF_QUICK_BACKUP_LIST="/boot;/metadata"
  #export FOX_DELETE_INITD_ADDON="1"
@@ -98,6 +107,8 @@ export OF_UNMOUNT_SDCARDS_BEFORE_REBOOT=1
 #"FOX_PORTS_INSTALLER" 
 #   - point to a custom directory for amended/additional installer files 
 #   - the contents will simply be copied over before creating the zip installer
+
+#"OF_FIX_DECRYPTION_ON_DATA_MEDIA
 
 
 
