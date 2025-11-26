@@ -67,7 +67,7 @@ service hal_cryptoeng_oppo /system/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-se
     disabled
     seclabel u:r:recovery:s0
 
-service keymaster-3-0 /system/bin/android.hardware.keymaster@3.0-service.trustonic
+service keymaster-4-0 /system/bin/android.hardware.keymaster@4.0-service.trustonic
     user root
     group root drmrpc
     disabled
@@ -111,7 +111,7 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
 on property:hwservicemanager.ready=true
     start hal_cryptoeng_oppo
     start mobicore
-    start keymaster-3-0
+    start keymaster-4-0
     start gatekeeper-1-0
 
 on property:ro.crypto.state=unsupported
@@ -119,7 +119,7 @@ on property:ro.crypto.state=unsupported
     stop mobicore
     stop servicemanager
     stop hwservicemanager
-    stop keymaster-3-0
+    stop keymaster-4-0
     stop gatekeeper-1-0
 
 on property:ro.crypto.state=unencrypted
@@ -127,7 +127,7 @@ on property:ro.crypto.state=unencrypted
     stop mobicore
     stop servicemanager
     stop hwservicemanager
-    stop keymaster-3-0
+    stop keymaster-4-0
     stop gatekeeper-1-0
 
 on property:twrp.decrypt.done=true
@@ -135,7 +135,7 @@ on property:twrp.decrypt.done=true
     stop mobicore
     stop servicemanager
     stop hwservicemanager
-    stop keymaster-3-0
+    stop keymaster-4-0
     stop gatekeeper-1-0
     
 on property:enable.fbe.service=0
@@ -143,7 +143,7 @@ on property:enable.fbe.service=0
     stop mobicore
     stop servicemanager
     stop hwservicemanager
-    stop keymaster-3-0
+    stop keymaster-4-0
     stop gatekeeperd
     stop gatekeeper-1-0  
 
