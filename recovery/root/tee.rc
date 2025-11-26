@@ -1,20 +1,3 @@
-on init
-    #create mountpoint for /mnt/vendor/persist partition
-   # mkdir /mnt/vendor/persist 0771 system system
-
-on post-fs
-   # chown system system /mnt/vendor/persist
-    #chmod 0771 /mnt/vendor/persist
-
-    # We restorecon /mnt/vendor/persist to set SEPolicy label.
-    #restorecon /mnt/vendor/persist
-
-    # Create mcRegistry to store failure record
-   # mkdir /mnt/vendor/persist/mcRegistry 0771 system system
-    #ifdef OPLUS_FEATURE_SECURITY_COMMON
-    #Meilin.Zhou@BSP.Security.Basic,2020/10/21,Add for set property of Store_1.tf
-    #chown system system /mnt/vendor/persist/mcRegistry/Store_1.tf
-    #endif /*OPLUS_FEATURE_SECURITY_COMMON*/
 
 on post-fs-data
     # Create /data/vendor/key_provisioning dir and get proper encryption policy installed
