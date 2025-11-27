@@ -150,10 +150,16 @@ on property:enable.fbe.service=0
 
 on boot
     start health-hal-2-1
+    start boot-hal-1-0   #testing for booting ofox
 
 service health-hal-2-1 /system/bin/android.hardware.health@2.1-service
     disabled
     user root
+
+service boot-hal-1-0 /system/bin/android.hardware.boot@1.0-service  #testing for booting ofox
+    disabled
+    user root
+
    
 on post-fs-data
     mkdir /data/vendor_de 0770 system system
