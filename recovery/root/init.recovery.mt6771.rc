@@ -5,7 +5,6 @@ on init
 mkdir /mnt/vendor/persist
 mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
 setprop persist.sys.firstlaunch false
-export LD_LIBRARY_PATH /system/lib64:/system/lib64/hw:/vendor/lib64:/vendor/lib64/hw
 
 mkdir /dev/cpuset/foreground
 mkdir /dev/cpuset/system-background
