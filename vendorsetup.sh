@@ -16,6 +16,7 @@ export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK="1"
 export OF_DISABLE_MIUI_OTA_BY_DEFAULT="1"
 export FOX_NO_SAMSUNG_SPECIAL="1"
 
+#orange fox features
 export FOX_DISABLE_APP_MANAGER="0"
 export FOX_ENABLE_APP_MANAGER="1"
 export OF_ALLOW_DISABLE_NAVBAR="0"
@@ -33,7 +34,7 @@ export OF_SUPPORT_OZIP_DECRYPTION=1
 export TW_OZIP_DECRYPT_KEY="ACAC1E13A72431AE4A1B22BBA1C1C6A2"
 
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
-#export OF_USE_TWRP_SAR_DETECT="1"
+
 export OF_USE_MAGISKBOOT="1"
 export OF_DONT_KEEP_LOG_HISTORY="1"
 export OF_FBE_METADATA_MOUNT_IGNORE="1"
@@ -43,7 +44,7 @@ export FOX_INSTALLER_DISABLE_AUTOREBOOT="0"
 export OF_MAINTAINER="Omar"
 export FOX_BUILD_TYPE="Unofficial"
 export TARGET_DEVICE_ALT="OP4C4B"
-#export FOX_VERSION="R11.1"
+export FOX_VERSION="R11.1"
 #export FOX_VARIANT="FBE"
 
 export OF_SCREEN_H="2340"
@@ -93,6 +94,8 @@ export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
 #   - point to a custom temp directory for creating the zip installer
 #  - ensure that this is a directory that you have write access to
 #   - there is no default
+
+#export OF_USE_TWRP_SAR_DETECT="1"
 #
 
 
