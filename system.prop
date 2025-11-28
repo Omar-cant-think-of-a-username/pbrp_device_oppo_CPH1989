@@ -4,6 +4,7 @@ ro.board.platform=mt6771
 ro.mediatek.platform=MT6771
 ro.treble.enabled=true
 ro.vndk.version=30
+ro.treble.enabled=true
 
 #for ota updates
 ro.product.device=OP4C4B
