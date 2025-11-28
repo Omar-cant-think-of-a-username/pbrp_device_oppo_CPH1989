@@ -56,6 +56,8 @@ export OF_DEFAULT_KEYMASTER_VERSION="3.0"
 export OF_ADVANCED_SECURITY="0"  #disable it for the time being to take logs
 #export OF_SKIP_FBE_DECRYPTION_SDKVERSION=31  #disabled until testing a12
 export OF_QUICK_BACKUP_LIST="/boot;/data;"
+#trying to fix decryption
+export OF_USE_LEGACY_CRYPTO="1"
 export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
 
 #partitions path
