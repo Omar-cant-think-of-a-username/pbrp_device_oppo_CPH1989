@@ -37,7 +37,7 @@ export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 
 export OF_USE_MAGISKBOOT="1"
 export OF_DONT_KEEP_LOG_HISTORY="1"
-#export OF_FBE_METADATA_MOUNT_IGNORE="1" for now
+export OF_FBE_METADATA_MOUNT_IGNORE="1" 
 export FOX_INSTALLER_DISABLE_AUTOREBOOT="0"
 
 # about
@@ -57,7 +57,6 @@ export OF_ADVANCED_SECURITY="0"  #disable it for the time being to take logs
 #export OF_SKIP_FBE_DECRYPTION_SDKVERSION=31  #disabled until testing a12
 export OF_QUICK_BACKUP_LIST="/boot;/data;"
 #trying to fix decryption
-export OF_USE_LEGACY_CRYPTO="1"
 export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
 
 #partitions path
