@@ -58,6 +58,12 @@ export OF_ADVANCED_SECURITY="0"  #disable it for the time being to take logs
 export OF_QUICK_BACKUP_LIST="/boot;/data;"
 export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
 
+#partitions path
+export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/by-name/recovery"
+export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/by-name/system"
+export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/by-name/vendor"
+export FOX_RECOVERY_BOOT_PARTITION="/dev/block/by-name/boot"
+
 
 #OF_NO_RELOAD_AFTER_DECRYPTION"  # ill see when decryption works
 #   - set to 1 to prevent OrangeFox from re-running the startup process after decryption
