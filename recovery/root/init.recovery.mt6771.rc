@@ -18,13 +18,11 @@ service keystore_auth /system/bin/keystore_auth
     oneshot
     user system
     group root
-    disabled
     seclabel u:r:recovery:s0
 
 service keystore /system/bin/keystore /tmp/misc/keystore
     user root
     group root drmrpc readproc
-    disabled
     seclabel u:r:recovery:s0
 
 
@@ -109,6 +107,8 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
 #For decryption
 
 on property:hwservicemanager.ready=true
+    start keystore_auth
+    start keystore
     start hal_cryptoeng_oppo
     start mobicore
     start keymaster-3-0
