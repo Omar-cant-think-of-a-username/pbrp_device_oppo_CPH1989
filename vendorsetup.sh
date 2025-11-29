@@ -50,7 +50,7 @@ export FOX_VERSION="R11.1"
 export OF_SCREEN_H="2340"
 export OF_STATUS_INDENT_LEFT=48
 export OF_STATUS_INDENT_RIGHT=48
-export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/runner/work/OrangeFox-Recovery-Builder-2024/OrangeFox-Recovery-Builder-2024/OrangeFox/fox_11.0/out/target/product/CPH1989/Magisk/Magisk-v27.0.zip"
+export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/runner/work/OrangeFox-Recovery-Builder-2024/OrangeFox-Recovery-Builder-2024/OrangeFox/fox_11.0/out/soong/Magisk/Magisk-v27.0.zip"
 export OF_DEFAULT_KEYMASTER_VERSION="3.0"
 
 export OF_ADVANCED_SECURITY="0"  #disable it for the time being to take logs
