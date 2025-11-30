@@ -50,7 +50,7 @@ export FOX_VERSION="R11.1"
 export OF_SCREEN_H="2340"
 export OF_STATUS_INDENT_LEFT=48
 export OF_STATUS_INDENT_RIGHT=48
-export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/runner/work/OrangeFox-Recovery-Builder-2024/OrangeFox-Recovery-Builder-2024/OrangeFox/fox_11.0/out/soong/Magisk/Magisk-v27.0.zip"
+#export FOX_USE_SPECIFIC_MAGISK_ZIP="/Magisk/Magisk-v27.0.zip"
 export OF_DEFAULT_KEYMASTER_VERSION="3.0"
 
 export OF_ADVANCED_SECURITY="0"  #disable it for the time being to take logs
@@ -64,6 +64,29 @@ export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/by-name/recovery"
 export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/by-name/system"
 export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/by-name/vendor"
 export FOX_RECOVERY_BOOT_PARTITION="/dev/block/by-name/boot"
+
+# Magisk
+function download_magisk(){
+    # Usage: download_magisk <destination_path>
+    local DEST=$1
+    if [ -n "${DEST}" ]; then
+      if [ ! -e ${DEST} ]; then
+        echo "Downloading Magisk Version 27.0..."
+        local MAGISK_V27_URL="https://github.com/topjohnwu/Magisk/releases/download/v27.0/Magisk-v27.0.apk"
+        mkdir -p $(dirname ${DEST})
+        wget -q ${MAGISK_V27_URL} -O ${DEST} || wget ${MAGISK_V27_URL} -O ${DEST}
+        local RCODE=$?
+        if [ "$RCODE" = "0" ]; then
+          echo "Successfully Downloaded Magisk v27.0 to ${DEST}!"
+          echo "Done!"
+        else
+          echo "Failed to Download Magisk v27.0 to ${DEST}!"
+        fi
+      fi
+    fi
+}
+export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk.zip
+download_magisk $FOX_USE_SPECIFIC_MAGISK_ZIP
 
 
 #OF_NO_RELOAD_AFTER_DECRYPTION"  # ill see when decryption works
