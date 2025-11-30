@@ -25,7 +25,7 @@
 /md1img            emmc      /dev/block/platform/bootdevice/by-name/md1img                     flags=display="Modem";backup=1
 
 # testing odm
-#/odm              ext4      /dev/block/platform/bootdevice/by-name/odm                        flags=backup=1;display="odm";flashimg=1
+#/odm              emmc      /dev/block/platform/bootdevice/by-name/odm                        flags=backup=1;display="odm";flashimg=1
 
 /seccfg            emmc      /dev/block/platform/bootdevice/by-name/seccfg
 /spmfw             emmc      /dev/block/platform/bootdevice/by-name/spmfw                      flags=display="Spm";backup=1
