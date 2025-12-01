@@ -3,7 +3,6 @@ import /tee.rc
 on init
 #for persist mounting and decryption too
 mkdir /mnt/vendor/persist
-mkdir /data/media
 mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
 setprop persist.sys.firstlaunch false
 
