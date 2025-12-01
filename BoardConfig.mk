@@ -152,6 +152,7 @@ TARGET_USES_LOGD := true
 TW_EXCLUDE_APEX := true
 TARGET_USES_MKE2FS := true
 TW_USE_UFS := true
+TW_EXCLUDE_TWRPAPP := true
 # TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
