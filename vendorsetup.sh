@@ -57,7 +57,7 @@ export OF_ADVANCED_SECURITY="0"  #disable it for the time being to take logs
 export OF_SKIP_FBE_DECRYPTION_SDKVERSION=31  #disabled until testing a12
 export OF_QUICK_BACKUP_LIST="/boot;/data;"
 #trying to fix decryption
-export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
+export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"  #mey be not supported
 
 #partitions path
 export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/by-name/recovery"
