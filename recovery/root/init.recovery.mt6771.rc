@@ -108,6 +108,9 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
 
 #For decryption
 
+on property:crypto.ready=1
+    start keymaster-3-0
+
 on property:hwservicemanager.ready=true
     start hal_cryptoeng_oppo
     start mobicore
