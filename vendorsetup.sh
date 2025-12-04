@@ -51,7 +51,6 @@ export FOX_VERSION="R11.1"
 export OF_SCREEN_H="2340"
 export OF_STATUS_INDENT_LEFT=48
 export OF_STATUS_INDENT_RIGHT=48
-export OF_DEFAULT_KEYMASTER_VERSION="3.0"
 
 export OF_ADVANCED_SECURITY="0"  #disable it for the time being to take logs
 export OF_SKIP_FBE_DECRYPTION_SDKVERSION=31  #disabled until testing a12
