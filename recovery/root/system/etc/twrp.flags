@@ -41,13 +41,7 @@
 /cam_vpu1          emmc      /dev/block/by-name/cam_vpu1                                       flags=display="cam_vpu";backup=1
 /cam_vpu2          emmc      /dev/block/by-name/cam_vpu2                                       flags=backup=1;subpartitionof=/cam_vpu1
 /cam_vpu3          emmc      /dev/block/by-name/cam_vpu3                                       flags=backup=1;subpartitionof=/cam_vpu1
-
-/gz1               emmc      /dev/block/by-name/gz1                                            flags=display="gz";backup=1
-/gz2               emmc      /dev/block/by-name/gz2                                            flags=backup=1;subpartitionof=/gz1
-/scp1              emmc      /dev/block/by-name/scp1                                           flags=display="Scp";backup=1
-/scp2              emmc      /dev/block/by-name/scp2                                           flags=backup=1;subpartitionof=/scp1
 /opporeserve       emmc      /dev/block/by-name/opporeserve2                                   flags=backup=1;display="Opporeserve2";flashimg=0
-/my_custom         emmc      /dev/block/by-name/my_custom                                      flags=backup=1;display="my_custom";flashimg=0
 
 
 # External-Devices (SDCARD | OTG)
