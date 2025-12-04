@@ -38,6 +38,7 @@
 /logo              emmc      /dev/block/platform/bootdevice/by-name/logo                       flags=display="Logo";backup=1;flashimg=1
 /tee1              emmc      /dev/block/platform/bootdevice/by-name/tee1                       flags=display="Tee";backup=1
 /tee2              emmc      /dev/block/platform/bootdevice/by-name/tee2                       flags=backup=1;subpartitionof=/tee1
+/opporeserve       emmc      /dev/block/by-name/opporeserve2                                   flags=backup=1;display="Opporeserve2";flashimg=0
 
 # External-Devices (SDCARD | OTG)
 /external_sd       vfat      /dev/block/mmcblk0p1          /dev/block/mmcblk0                  flags=display="Micro SD card";storage;wipeingui;removable
