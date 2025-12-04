@@ -53,9 +53,10 @@ export OF_STATUS_INDENT_RIGHT=48
 export FOX_USE_SPECIFIC_MAGISK_ZIP="~/Magisk/Magisk-27.0.zip"
 export OF_DEFAULT_KEYMASTER_VERSION="3.0"
 export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
-export OF_QUICK_BACKUP_LIST="/data;/storage;/persist;"
+export OF_QUICK_BACKUP_LIST="/boot;/data;"
 export FOX_MISCELLANEOUS_ROOT_DIRECTORY="/data/media/OFRP"
 export OF_DEFAULT_TIMEZONE="WET-2"
+#export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1" disabled for now
 
 export OF_ADVANCED_SECURITY=1
 
@@ -73,46 +74,12 @@ export OF_ADVANCED_SECURITY=1
 #export OF_SKIP_FBE_DECRYPTION_SDKVERSION=30
 #OF_SPLASH_MAX_SIZE
  
- #export OF_QUICK_BACKUP_LIST="/boot;/metadata"
  #export FOX_DELETE_INITD_ADDON="1"
- #export OF_USE_TWRP_SAR_DETECT="1"
 
 # "FOX_LOCAL_CALLBACK_SCRIPT"
  #  - point to a custom "callback" script that will be executed just before creating the final recovery image
   # - eg, a script to delete some files, or add some files to the ramdisk
 #FOX_RESET_SETTINGS
-
- # ensure that /sdcard is bind-unmounted before f2fs data repair or format
-	#export OF_UNBIND_SDCARD_F2FS=1
- #OF_NO_SPLASH_CHANGE
-
-#OF_WIPE_METADATA_AFTER_DATAFORMAT" [NEW] [EXPERIMENTAL!!]
-#- Set to 1 to automatically wipe /metadata after formatting the data partition
-#- Use with care: use only if the device/ROM has a metadata partition - and - formatting /data doesn't automatically wipe it
-#- It is up to you to verify for yourself that this is needed in the first place, and if used, that it works as expected
-#- default = 0
-
-#OF_DONT_KEEP_LOG_HISTORY"
-#OF_REPORT_HARMLESS_MOUNT_ISSUES
-#"
-#   - point to a custom temp directory for creating the zip installer
-#   - ensure that this is a directory that you have write access to
-#   - there is no default
-#
-#"FOX_PORTS_INSTALLER" 
-#   - point to a custom directory for amended/additional installer files 
-#   - the contents will simply be copied over before creating the zip installer
-
-#"FOX_PORTS_TMP"
-#   - point to a custom temp directory for creating the zip installer
-#  - ensure that this is a directory that you have write access to
-#   - there is no default
-#
-#"FOX_PORTS_INSTALLER" 
-#   - point to a custom directory for amended/additional installer files 
-#   - the contents will simply be copied over before creating the zip installer
-
-#"OF_FIX_DECRYPTION_ON_DATA_MEDIA
 
 
 
