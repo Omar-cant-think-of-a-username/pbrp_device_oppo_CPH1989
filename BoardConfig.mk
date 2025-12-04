@@ -107,8 +107,11 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 # Metadata
 BOARD_ROOT_EXTRA_FOLDERS := metadata my_product my_heytap my_company my_preload my_stock my_carrier my_region my_engineering my_manifest
 
-
+# screen dimentions and status bar
 # TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2340
+TARGET_SCREEN_DENSITY := 480
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
