@@ -121,6 +121,7 @@ on property:ro.crypto.state=unsupported
     stop hwservicemanager
     stop keymaster-3-0
     stop gatekeeper-1-0
+    stop gatekeeperd
 
 on property:ro.crypto.state=unencrypted
     stop hal_cryptoeng_oppo
@@ -129,6 +130,7 @@ on property:ro.crypto.state=unencrypted
     stop hwservicemanager
     stop keymaster-3-0
     stop gatekeeper-1-0
+    stop gatekeeperd
 
 on property:twrp.decrypt.done=true
     stop hal_cryptoeng_oppo
@@ -137,6 +139,7 @@ on property:twrp.decrypt.done=true
     stop hwservicemanager
     stop keymaster-3-0
     stop gatekeeper-1-0
+    stop gatekeeperd
     
 on property:enable.fbe.service=0
     stop hal_cryptoeng_oppo
@@ -156,7 +159,7 @@ service health-hal-2-1 /system/bin/android.hardware.health@2.1-service
     disabled
     user root
 
-service boot-hal-1-0 /system/bin/android.hardware.boot@1.0-service  #testing for booting ofox
+service boot-hal-1-0 /system/bin/android.hardware.boot@1.0-service  #for booting ofox
     disabled
     user root
 
