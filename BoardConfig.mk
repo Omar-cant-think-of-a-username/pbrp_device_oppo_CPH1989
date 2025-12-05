@@ -163,6 +163,9 @@ TW_USE_UFS := true
 # TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 TW_DEFAULT_LANGUAGE := en
+#essential for booting 12.1
+TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_RESETPROP := true
 
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
