@@ -164,6 +164,16 @@ TW_USE_UFS := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 TW_DEFAULT_LANGUAGE := en
 
+# Additional binaries & libraries needed for recovery
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libkeymint.so \
+    keystore2
+
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    libkeymint.so \
+    keystore2
+
+
 # PBRP specific build flags
 PB_TORCH_PATH := "/proc/qcom_flash"
 PB_TORCH_MAX_BRIGHTNESS := 1
