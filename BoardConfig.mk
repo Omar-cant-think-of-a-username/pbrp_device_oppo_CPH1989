@@ -112,6 +112,11 @@ BOARD_ROOT_EXTRA_FOLDERS := metadata my_product my_heytap my_company my_preload 
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_DENSITY := 480
+# Statusbar icons flags
+TW_STATUS_ICONS_ALIGN := center
+#TW_CUSTOM_CPU_POS := 50
+#TW_CUSTOM_CLOCK_POS := 300
+#TW_CUSTOM_BATTERY_POS := 800
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
