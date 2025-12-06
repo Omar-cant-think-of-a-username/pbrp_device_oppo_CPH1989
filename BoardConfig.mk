@@ -155,6 +155,9 @@ TW_USE_UFS := true
 # TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 TW_DEFAULT_LANGUAGE := en
+#test for decryption
+TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_RESETPROP := true
 
 # PBRP specific build flags
 PB_TORCH_PATH := "/proc/qcom_flash"
