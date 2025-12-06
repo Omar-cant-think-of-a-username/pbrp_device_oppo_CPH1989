@@ -87,7 +87,28 @@ function download_magisk(){
 export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk.zip
 download_magisk $FOX_USE_SPECIFIC_MAGISK_ZIP
 
-export OF_MAINTAINER_AVATAR=""
+function maintainer_avatar(){
+    # Usage: download_magisk <destination_path>
+    local DEST=$1
+    if [ -n "${DEST}" ]; then
+      if [ ! -e ${DEST} ]; then
+        echo "Downloading Magisk Version 27.0..."
+        local MAGISK_V27_URL="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg"
+        mkdir -p $(dirname ${DEST})
+        wget -q ${MAGISK_V27_URL} -O ${DEST} || wget ${MAGISK_V27_URL} -O ${DEST}
+        local RCODE=$?
+        if [ "$RCODE" = "0" ]; then
+          echo "Successfully Downloaded Magisk v27.0 to ${DEST}!"
+          echo "Done!"
+        else
+          echo "Failed to Download Magisk v27.0 to ${DEST}!"
+        fi
+      fi
+    fi
+}
+
+export OF_MAINTAINER_AVATAR="/test/test.png"
+maintainer_avatar $OF_MAINTAINER_AVATAR
 
 
 #OF_NO_RELOAD_AFTER_DECRYPTION"  # ill see when decryption works
