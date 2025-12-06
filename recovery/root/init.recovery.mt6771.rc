@@ -8,9 +8,7 @@ on init
 mkdir /mnt/vendor/persist
 mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
 setprop persist.sys.firstlaunch false
-setprop vendor.gatekeeper.disable_spu true
-
-
+#setprop vendor.gatekeeper.disable_spu true
 
 on fs
     install_keyring
