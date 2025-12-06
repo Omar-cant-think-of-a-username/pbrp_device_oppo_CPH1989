@@ -6,8 +6,8 @@ mkdir /mnt/vendor/persist
 mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
 setprop persist.sys.firstlaunch false
 
-mkdir /dev/cpuset/foreground
-mkdir /dev/cpuset/system-background
+#mkdir /dev/cpuset/foreground
+#mkdir /dev/cpuset/system-background
 
 
 on fs
@@ -58,8 +58,8 @@ service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
     disabled
     seclabel u:r:recovery:s0
 
-service gatekeeperd /system/bin/gatekeeperd /data/misc/gatekeeper
-    seclabel u:r:recovery:s0
+#service gatekeeperd /system/bin/gatekeeperd /data/misc/gatekeeper
+#    seclabel u:r:recovery:s0
 
 service hal_cryptoeng_oppo /system/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service
      user root
@@ -121,7 +121,7 @@ on property:ro.crypto.state=unsupported
     stop hwservicemanager
     stop keymaster-3-0
     stop gatekeeper-1-0
-    stop gatekeeperd
+ #   stop gatekeeperd
 
 on property:ro.crypto.state=unencrypted
     stop hal_cryptoeng_oppo
@@ -130,7 +130,7 @@ on property:ro.crypto.state=unencrypted
     stop hwservicemanager
     stop keymaster-3-0
     stop gatekeeper-1-0
-    stop gatekeeperd
+#    stop gatekeeperd
 
 on property:twrp.decrypt.done=true
     stop hal_cryptoeng_oppo
@@ -139,7 +139,7 @@ on property:twrp.decrypt.done=true
     stop hwservicemanager
     stop keymaster-3-0
     stop gatekeeper-1-0
-    stop gatekeeperd
+#    stop gatekeeperd
     
 on property:enable.fbe.service=0
     stop hal_cryptoeng_oppo
@@ -147,7 +147,7 @@ on property:enable.fbe.service=0
     stop servicemanager
     stop hwservicemanager
     stop keymaster-3-0
-    stop gatekeeperd
+#    stop gatekeeperd
     stop gatekeeper-1-0  
 
 
