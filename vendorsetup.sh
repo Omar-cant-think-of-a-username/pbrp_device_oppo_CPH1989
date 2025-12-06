@@ -87,6 +87,8 @@ function download_magisk(){
 export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk.zip
 download_magisk $FOX_USE_SPECIFIC_MAGISK_ZIP
 
+export OF_MAINTAINER_AVATAR=""
+
 
 #OF_NO_RELOAD_AFTER_DECRYPTION"  # ill see when decryption works
 #   - set to 1 to prevent OrangeFox from re-running the startup process after decryption
