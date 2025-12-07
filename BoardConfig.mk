@@ -9,6 +9,7 @@ DEVICE_PATH := device/oppo/CPH1989
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -162,10 +163,7 @@ TW_EXCLUDE_APEX := true
 TARGET_USES_MKE2FS := true
 TW_USE_UFS := true
 # TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
-BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 TW_DEFAULT_LANGUAGE := en
-# testing encrypted backup
-TW_EXCLUDE_ENCRYPTED_BACKUPS := false
 
 # PBRP specific build flags
 PB_TORCH_PATH := "/proc/qcom_flash"
