@@ -1,14 +1,9 @@
 import /tee.rc
 
-on early-init
-    start gatekeeper-1-0
-
 on init
-#for persist mounting and decryption too
 mkdir /mnt/vendor/persist
 mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
 setprop persist.sys.firstlaunch false
-#setprop vendor.gatekeeper.disable_spu true
 
 on fs
     install_keyring
