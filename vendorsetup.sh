@@ -7,7 +7,7 @@ export OF_FL_PATH1="/system/flashlight"
 export OF_USE_GREEN_LED="0"
 
 export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
-export OF_DONT_PATCH_ON_FRESH_INSTALLATION="1"
+export OF_DONT_PATCH_ON_FRESH_INSTALLATION="0"
 
 # no special MIUI/Samsung stuff
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES="1"
@@ -56,7 +56,7 @@ export OF_ADVANCED_SECURITY="0"  #disable it for the time being to take logs
 export OF_SKIP_FBE_DECRYPTION_SDKVERSION=31  #disabled until testing a12
 export OF_QUICK_BACKUP_LIST="/boot;/data;"
 #trying to fix decryption
-export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"  #mey be not supported
+export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"  #may be not supported
 
 #partitions path
 export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/by-name/recovery"
@@ -87,28 +87,8 @@ function download_magisk(){
 export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk.zip
 download_magisk $FOX_USE_SPECIFIC_MAGISK_ZIP
 
-function maintainer_avatar(){
-    # Usage: download_magisk <destination_path>
-    local DEST=$1
-    if [ -n "${DEST}" ]; then
-      if [ ! -e ${DEST} ]; then
-        echo "Downloading Magisk Version 27.0..."
-        local MAGISK_V27_URL="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg"
-        mkdir -p $(dirname ${DEST})
-        wget -q ${MAGISK_V27_URL} -O ${DEST} || wget ${MAGISK_V27_URL} -O ${DEST}
-        local RCODE=$?
-        if [ "$RCODE" = "0" ]; then
-          echo "Successfully Downloaded Magisk v27.0 to ${DEST}!"
-          echo "Done!"
-        else
-          echo "Failed to Download Magisk v27.0 to ${DEST}!"
-        fi
-      fi
-    fi
-}
 
-export OF_MAINTAINER_AVATAR="/test/test.png"
-maintainer_avatar $OF_MAINTAINER_AVATAR
+#export OF_MAINTAINER_AVATAR="/test/test.png"
 
 
 #OF_NO_RELOAD_AFTER_DECRYPTION"  # ill see when decryption works
