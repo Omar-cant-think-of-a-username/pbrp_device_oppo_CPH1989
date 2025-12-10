@@ -16,6 +16,3 @@ ro.separate.soft=19533
 ro.vendor.mtk_trustonic_tee_support=1
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.uses_fs_ioc_add_encryption_key=true
-
-#avb
-ro.boot.avb_version=1.1
