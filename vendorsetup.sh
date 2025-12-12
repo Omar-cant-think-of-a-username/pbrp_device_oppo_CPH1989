@@ -7,7 +7,7 @@ export OF_FL_PATH1="/system/flashlight"
 export OF_USE_GREEN_LED="0"
 
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-export OF_DONT_PATCH_ON_FRESH_INSTALLATION="1"
+export OF_DONT_PATCH_ON_FRESH_INSTALLATION="0"
 
 # no special MIUI/Samsung stuff
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES="1"
@@ -26,7 +26,6 @@ export FOX_REMOVE_AAPT="0"
 export FOX_USE_XZ_UTILS="1"
 export FOX_USE_SED_BINARY="1"
 export FOX_USE_GREP_BINARY="1"
-export FOX_USE_DATE_BINARY="1"
 
 # for oppo/realme ozip decryption
 export OF_SUPPORT_OZIP_DECRYPTION=1
@@ -53,34 +52,17 @@ export OF_STATUS_INDENT_RIGHT=48
 export FOX_USE_SPECIFIC_MAGISK_ZIP="~/Magisk/Magisk-27.0.zip"
 export OF_DEFAULT_KEYMASTER_VERSION="3.0"
 export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
-export OF_QUICK_BACKUP_LIST="/boot;/data;"
 export FOX_MISCELLANEOUS_ROOT_DIRECTORY="/data/media/OFRP"
+export OF_QUICK_BACKUP_LIST="/boot;/data;"
 export OF_DEFAULT_TIMEZONE="WET-2"
-#export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1" disabled for now
+export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
 
 export OF_ADVANCED_SECURITY=1
 
 
-#"OF_FORCE_USE_RECOVERY_FSTAB" [NEW] (renamed from OF_LEGACY_PROCESS_FSTAB")
-#- If decryption fails on an Mtk device when it was working before, try setting this to 1 to bypass processing of ROM fstabs, and only use the recovery's fstab
-#- This var is equivalent to setting "TW_SKIP_ADDITIONAL_FSTAB := true" in BoardConfig.mk or device.mk
-#- This should not be used unless absolutely necessary
-#- default = 0
-
-#export OF_UNMOUNT_SDCARDS_BEFORE_REBOOT=1
-
-
-
-#export OF_SKIP_FBE_DECRYPTION_SDKVERSION=30
+#"OF_NO_RELOAD_AFTER_DECRYPTION"
+#OF_SKIP_FBE_DECRYPTION_SDKVERSION=31
 #OF_SPLASH_MAX_SIZE
- 
- #export FOX_DELETE_INITD_ADDON="1"
-
-# "FOX_LOCAL_CALLBACK_SCRIPT"
- #  - point to a custom "callback" script that will be executed just before creating the final recovery image
-  # - eg, a script to delete some files, or add some files to the ramdisk
-#FOX_RESET_SETTINGS
-
 
 
 
