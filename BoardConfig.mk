@@ -170,12 +170,10 @@ TW_INCLUDE_RESETPROP := true
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster3device \
-    android.hardware.keymaster@3.0-impl
     
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster3device.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@3.0-impl.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster3device.so
 
 
 # PBRP specific build flags
