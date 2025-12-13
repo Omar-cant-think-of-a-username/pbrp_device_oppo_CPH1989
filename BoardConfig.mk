@@ -167,14 +167,12 @@ TW_DEFAULT_LANGUAGE := en
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 
-# Additional binaries & libraries needed for recovery
-#TARGET_RECOVERY_DEVICE_MODULES += \
-#    libkeymint.so \
-#    keystore2
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libkeymaster3device
+   
 
-#TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-#    libkeymint.so \
-#    keystore2
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster3device.so
 
 
 # PBRP specific build flags
