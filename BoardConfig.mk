@@ -170,10 +170,11 @@ TW_INCLUDE_RESETPROP := true
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster3device \
-    
+    liburee_meta_drmkeyinstall
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster3device.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster3device.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/liburee_meta_drmkeyinstall.so
 
 
 # PBRP specific build flags
