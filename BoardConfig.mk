@@ -172,11 +172,15 @@ TW_INCLUDE_RESETPROP := true
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster3device \
-    libpuresoftkeymasterdevice
+    libpuresoftkeymasterdevice \
+    libsoftkeymasterdevice \
+    libkeymaster_portable
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster3device.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libsoftkeymasterdevice.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster_portable.so
 
 
 # PBRP specific build flags
