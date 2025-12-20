@@ -24,8 +24,8 @@ export FOX_EXCLUDE_NANO_EDITOR="0"
 export FOX_USE_NANO_EDITOR="1"
 export FOX_REMOVE_AAPT="0"
 export FOX_USE_XZ_UTILS="1"
-export FOX_USE_SED_BINARY="1"
-export FOX_USE_GREP_BINARY="1"
+export FOX_USE_SED_BINARY="0"
+export FOX_USE_GREP_BINARY="0"
 
 # for oppo/realme ozip decryption
 export OF_SUPPORT_OZIP_DECRYPTION=1
