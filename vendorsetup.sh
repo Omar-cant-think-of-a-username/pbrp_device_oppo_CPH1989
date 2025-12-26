@@ -49,16 +49,36 @@ export TARGET_DEVICE_ALT="OP4C4B"
 export OF_SCREEN_H="2340"
 export OF_STATUS_INDENT_LEFT=48
 export OF_STATUS_INDENT_RIGHT=48
-export FOX_USE_SPECIFIC_MAGISK_ZIP="~/Magisk/Magisk-27.0.zip"
-export OF_DEFAULT_KEYMASTER_VERSION="3.0"
+#export OF_DEFAULT_KEYMASTER_VERSION="3.0"
 export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
 export FOX_MISCELLANEOUS_ROOT_DIRECTORY="/data/media/OFRP"
 export OF_QUICK_BACKUP_LIST="/boot;/data;"
 export OF_DEFAULT_TIMEZONE="WET-2"
-export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
+#export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
 
 export OF_ADVANCED_SECURITY=1
-
+# Magisk
+function download_magisk(){
+    # Usage: download_magisk <destination_path>
+    local DEST=$1
+    if [ -n "${DEST}" ]; then
+      if [ ! -e ${DEST} ]; then
+        echo "Downloading Magisk Version 27.0..."
+        local MAGISK_V27_URL="https://github.com/topjohnwu/Magisk/releases/download/v27.0/Magisk-v27.0.apk"
+        mkdir -p $(dirname ${DEST})
+        wget -q ${MAGISK_V27_URL} -O ${DEST} || wget ${MAGISK_V27_URL} -O ${DEST}
+        local RCODE=$?
+        if [ "$RCODE" = "0" ]; then
+          echo "Successfully Downloaded Magisk v27.0 to ${DEST}!"
+          echo "Done!"
+        else
+          echo "Failed to Download Magisk v27.0 to ${DEST}!"
+        fi
+      fi
+    fi
+}
+export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk.zip
+download_magisk $FOX_USE_SPECIFIC_MAGISK_ZIP
 
 #"OF_NO_RELOAD_AFTER_DECRYPTION"
 #OF_SKIP_FBE_DECRYPTION_SDKVERSION=31
