@@ -200,10 +200,12 @@ SHRP_EXTERNAL := /external_sd
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb-otg
 SHRP_FLASH := 1
+SHRP_CUSTOM_FLASHLIGHT := true
 SHRP_FONP_1 := "/system/flashlight/brightness"
 SHRP_FLASH_MAX_BRIGHTNESS := 1
 SHRP_REC := "/dev/block/by-name/recovery"
 SHRP_EXPRESS := true
+SHRP_EXPRESS_USE_DATA := true
 SHRP_DEVICE_TYPE := "A/B"
 SHRP_REC_TYPE := "Normal"
 
