@@ -211,15 +211,9 @@ SHRP_EXPRESS := true
 SHRP_DEVICE_TYPE := "A/B"
 SHRP_REC_TYPE := "Normal"
 
-SHRP_PATH := device/oppo/CPH1989
-SHRP_EXTERNAL_ADDON_PATH := "device/oppo/CPH1989/addons/"
+#SHRP_PATH := device/oppo/CPH1989
+#SHRP_EXTERNAL_ADDON_PATH := "device/oppo/CPH1989/addons/"
 #add firist addon
-SHRP_EXTERNAL_ADDON_1_NAME := "Fix booting with encryption"
-SHRP_EXTERNAL_ADDON_1_INFO := "this patch will allow you to boot gsis without disabling encryption , system must be rw"
-SHRP_EXTERNAL_ADDON_1_FILENAME := "gsi-boot.zip"
-SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Confirm"
-SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Done"
-SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
 
 
 SHRP_NOTCH := false
