@@ -87,17 +87,14 @@ function download_magisk(){
 export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk.zip
 download_magisk $FOX_USE_SPECIFIC_MAGISK_ZIP
 
+export FOX_LOCAL_CALLBACK_SCRIPT="device/oppo/CPH1989/recovery/root/my_callback.sh"
 
-#export OF_MAINTAINER_AVATAR="/test/test.png"
+
 
 
 #OF_NO_RELOAD_AFTER_DECRYPTION"  # ill see when decryption works
 #   - set to 1 to prevent OrangeFox from re-running the startup process after decryption
 #   - default = 0
-
-# "FOX_LOCAL_CALLBACK_SCRIPT"
- #  - point to a custom "callback" script that will be executed just before creating the final recovery image
-  # - eg, a script to delete some files, or add some files to the ramdisk
 
 
 
