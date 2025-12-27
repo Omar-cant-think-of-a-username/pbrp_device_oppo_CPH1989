@@ -202,6 +202,8 @@ SHRP_OTG := /usb-otg
 SHRP_FLASH := 1
 SHRP_CUSTOM_FLASHLIGHT := true
 SHRP_FONP_1 := /system/flashlight/brightness
+SHRP_FONP_2 := /proc/qcom_flash
+SHRP_FONP_3 := "/proc/qcom_flash"
 SHRP_FLASH_MAX_BRIGHTNESS := 1
 SHRP_REC := "/dev/block/by-name/recovery"
 SHRP_EXPRESS := true
@@ -211,8 +213,8 @@ SHRP_REC_TYPE := "Normal"
 
 
 SHRP_NOTCH := false
-SHRP_STATUSBAR_RIGHT_PADDING := 50
-SHRP_STATUSBAR_LEFT_PADDING := 50
+SHRP_STATUSBAR_RIGHT_PADDING := 60
+SHRP_STATUSBAR_LEFT_PADDING := 60
 
 # MTK Hardware 
  BOARD_HAS_MTK_HARDWARE := true 
