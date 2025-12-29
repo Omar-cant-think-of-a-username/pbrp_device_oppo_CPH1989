@@ -59,6 +59,27 @@ export FOX_LOCAL_CALLBACK_SCRIPT="device/oppo/CPH1989/recovery/root/my_callback.
 
 export OF_ADVANCED_SECURITY=1
 # Magisk
+function download_magisk(){
+    # Usage: download_magisk <destination_path>
+    local DEST=$1
+    if [ -n "${DEST}" ]; then
+      if [ ! -e ${DEST} ]; then
+        echo "Downloading Magisk Version 27.0..."
+        local MAGISK_V27_URL="https://github.com/topjohnwu/Magisk/releases/download/v27.0/Magisk-v27.0.apk"
+        mkdir -p $(dirname ${DEST})
+        wget -q ${MAGISK_V27_URL} -O ${DEST} || wget ${MAGISK_V27_URL} -O ${DEST}
+        local RCODE=$?
+        if [ "$RCODE" = "0" ]; then
+          echo "Successfully Downloaded Magisk v27.0 to ${DEST}!"
+          echo "Done!"
+        else
+          echo "Failed to Download Magisk v27.0 to ${DEST}!"
+        fi
+      fi
+    fi
+}
+export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk.zip
+download_magisk $FOX_USE_SPECIFIC_MAGISK_ZIP
 
 
 #"OF_NO_RELOAD_AFTER_DECRYPTION"
