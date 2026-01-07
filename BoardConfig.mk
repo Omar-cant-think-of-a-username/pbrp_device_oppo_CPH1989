@@ -169,9 +169,9 @@ TW_DEFAULT_LANGUAGE := en
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 
- Additional binaries & libraries needed for recovery
+# Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
-    libpuresoftkeymasterdevice \
+    libpuresoftkeymasterdevice
 #    libsoftkeymasterdevice \
 #    libkeymaster_portable \
 #    ashmemd_aidl_interface-cpp \
