@@ -169,18 +169,16 @@ TW_DEFAULT_LANGUAGE := en
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 
-# Additional binaries & libraries needed for recovery
-#TARGET_RECOVERY_DEVICE_MODULES += \
-#    libkeymaster3device \
-#    libpuresoftkeymasterdevice \
+ Additional binaries & libraries needed for recovery
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libpuresoftkeymasterdevice \
 #    libsoftkeymasterdevice \
 #    libkeymaster_portable \
 #    ashmemd_aidl_interface-cpp \
 #    libashmemd_client
 
-#TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-#    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster3device.so \
-#    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 #    $(TARGET_OUT_SHARED_LIBRARIES)/libsoftkeymasterdevice.so \
 #    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster_portable.so \
 #    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
