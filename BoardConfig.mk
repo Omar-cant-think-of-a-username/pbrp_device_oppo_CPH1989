@@ -126,12 +126,12 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
 # Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-TW_USE_FSCRYPT_POLICY := 1
+TW_INCLUDE_CRYPTO := false
+TW_INCLUDE_CRYPTO_FBE := false
+#TW_USE_FSCRYPT_POLICY := 1
 #BOARD_USES_METADATA_PARTITION := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
-TW_PREPARE_DATA_MEDIA_EARLY := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := false
+#TW_PREPARE_DATA_MEDIA_EARLY := true
 
 
 # TWRP Configuration
@@ -170,15 +170,15 @@ TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 
 # Additional binaries & libraries needed for recovery
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libpuresoftkeymasterdevice \
-    ashmemd_aidl_interface-cpp \
-    libashmemd_client
+#TARGET_RECOVERY_DEVICE_MODULES += \
+#    libpuresoftkeymasterdevice \
+#    ashmemd_aidl_interface-cpp \
+#    libashmemd_client
 
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
+#TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+#    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
+#    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
+#    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
 
 
 # PBRP specific build flags
