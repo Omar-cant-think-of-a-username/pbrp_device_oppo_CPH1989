@@ -45,29 +45,6 @@ export OF_DEFAULT_TIMEZONE="WET-2"
 
 export OF_ADVANCED_SECURITY=1
 
-# Magisk
-function download_magisk(){
-    # Usage: download_magisk <destination_path>
-    local DEST=$1
-    if [ -n "${DEST}" ]; then
-      if [ ! -e ${DEST} ]; then
-        echo "Downloading Magisk Version 30.6..."
-        local MAGISK_V30_URL="https://github.com/topjohnwu/Magisk/releases/download/v30.6/Magisk-v30.6.apk"
-        mkdir -p $(dirname ${DEST})
-        wget -q ${MAGISK_V30_URL} -O ${DEST} || wget ${MAGISK_V30_URL} -O ${DEST}
-        local RCODE=$?
-        if [ "$RCODE" = "0" ]; then
-          echo "Successfully Downloaded Magisk v30.6 to ${DEST}!"
-          echo "Done!"
-        else
-          echo "Failed to Download Magisk v30.6 to ${DEST}!"
-        fi
-      fi
-    fi
-}
-export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk.zip
-download_magisk $FOX_USE_SPECIFIC_MAGISK_ZIP
-
 
 #export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
 #"OF_NO_RELOAD_AFTER_DECRYPTION"
