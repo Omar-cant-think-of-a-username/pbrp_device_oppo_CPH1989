@@ -190,29 +190,37 @@ SHRP_DEVICE_CODE := CPH1989
 SHRP_MAINTAINER := Omar
 SHRP_DARK := true
 SHRP_EDL_MODE := 0
-SHRP_EXTERNAL := /external_sd
+SHRP_EXTERNAL := /sdcard1
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb-otg
 SHRP_FLASH := 1
 SHRP_CUSTOM_FLASHLIGHT := true
-SHRP_FONP_1 := /system/flashlight/brightness
-SHRP_FONP_2 := /proc/qcom_flash
+SHRP_FONP_1 := /proc/qcom_flash
+SHRP_FONP_2 := /system/flashlight/brightness
 SHRP_FONP_3 := "/proc/qcom_flash"
 SHRP_FLASH_MAX_BRIGHTNESS := 1
 SHRP_REC := "/dev/block/by-name/recovery"
 SHRP_EXPRESS := true
-#SHRP_EXPRESS_USE_DATA := true
+SHRP_EXPRESS_USE_DATA := false
 SHRP_DEVICE_TYPE := "A/B"
 SHRP_REC_TYPE := "Normal"
 
-#SHRP_PATH := device/oppo/CPH1989
-#SHRP_EXTERNAL_ADDON_PATH := "device/oppo/CPH1989/addons/"
+SHRP_PATH := device/oppo/CPH1989
+SHRP_EXTERNAL_ADDON_PATH := "device/oppo/CPH1989/addons/"
 #add firist addon
 
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
+SHRP_EXTERNAL_ADDON_1_NAME := 'Mount Super as RW'
+SHRP_EXTERNAL_ADDON_1_INFO := 'This will mount your system partitions as RW'
+SHRP_EXTERNAL_ADDON_1_FILENAME := test.zip
+SHRP_EXTERNAL_ADDON_1_BTN_TEXT := Mount
+SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := Mounted
+SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
 
 SHRP_NOTCH := false
-SHRP_STATUSBAR_RIGHT_PADDING := 60
-SHRP_STATUSBAR_LEFT_PADDING := 60
+SHRP_STATUSBAR_RIGHT_PADDING := 73
+SHRP_STATUSBAR_LEFT_PADDING := 73
 
 # MTK Hardware 
  BOARD_HAS_MTK_HARDWARE := true 
