@@ -206,7 +206,7 @@ SHRP_DEVICE_TYPE := "A/B"
 SHRP_REC_TYPE := "Normal"
 
 SHRP_PATH := device/oppo/CPH1989
-SHRP_EXTERNAL_ADDON_PATH := "device/oppo/CPH1989/addons/"
+SHRP_EXTERNAL_ADDON_PATH := "device/oppo/CPH1989/addon/"
 #add firist addon
 
 SHRP_SKIP_DEFAULT_ADDON_1 := true
