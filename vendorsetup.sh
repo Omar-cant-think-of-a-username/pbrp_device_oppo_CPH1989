@@ -1,5 +1,24 @@
 
 
+FDEVICE="CPH1989"
+
+fox_get_target_device() {
+	export script_path="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+	if echo "$script_path" | grep -q "$FDEVICE"; then
+		FOX_BUILD_DEVICE="$FDEVICE"
+	elif echo "$0" | grep -q "$FDEVICE"; then
+		FOX_BUILD_DEVICE="$FDEVICE"
+	fi
+}
+
+if [ -z "$FOX_BUILD_DEVICE" ]; then
+	fox_get_target_device
+fi
+
+if [ "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
+	echo "Detected build device: $FOX_BUILD_DEVICE"
+
+
 
 # Flashlight
 export OF_FLASHLIGHT_ENABLE="1"
@@ -42,8 +61,15 @@ export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
 export FOX_MISCELLANEOUS_ROOT_DIRECTORY="/data/media/OFRP"
 export OF_QUICK_BACKUP_LIST="/boot;/data;"
 export OF_DEFAULT_TIMEZONE="WET-2"
+#magisk
+export FOX_USE_SPECIFIC_MAGISK_ZIP="$script_path/prebuilt/Magisk-v30.6.zip"
 
 export OF_ADVANCED_SECURITY=1
+
+else
+	echo "I: vendorsetup.sh skipped; device mismatch or environment issue."
+fi
+
 
 
 #export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
