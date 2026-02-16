@@ -42,6 +42,6 @@
 
 
 # External-Devices (SDCARD | OTG)
-/sdcard1       vfat      /dev/block/mmcblk0p1          /dev/block/mmcblk0                  flags=display="Micro SD card";storage;wipeingui;removable
+/sdcard1       auto      /dev/block/mmcblk0p1          /dev/block/mmcblk0                  flags=display="Micro SD card";storage;wipeingui;removable
 /usb_otg       auto      /dev/block/sdd1               /dev/block/sdd                      flags=display="Usb-Otg";storage;wipeingui;removable
 /storage       ext4      /data/media/0                                                     flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
