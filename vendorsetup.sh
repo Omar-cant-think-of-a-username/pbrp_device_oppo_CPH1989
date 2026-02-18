@@ -55,12 +55,8 @@ export FOX_USE_NANO_EDITOR="1"
 export FOX_USE_XZ_UTILS="1"
 
 #reduce the size for booting
-#export FOX_USE_XZ_UTILS="0"
 export FOX_REMOVE_AAPT="1"
-export FOX_DELETE_INITD_ADDON="1"
 export FOX_REMOVE_BASH="1"
-#export FOX_USE_NANO_EDITOR="0"
-#export FOX_EXCLUDE_NANO_EDITOR="1"
 #export FOX_DRASTIC_SIZE_REDUCTION="1"
 
 # for oppo/realme ozip decryption
