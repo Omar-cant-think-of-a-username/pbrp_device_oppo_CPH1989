@@ -127,7 +127,7 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_USE_FSCRYPT_POLICY := 1
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
-#TW_PREPARE_DATA_MEDIA_EARLY := true
+TW_PREPARE_DATA_MEDIA_EARLY := true
 
 
 # TWRP Configuration
@@ -137,7 +137,6 @@ TW_EXTRA_LANGUAGES := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_DEFAULT_BRIGHTNESS := 531
 TW_MAX_BRIGHTNESS := 1023
-# TW_INCLUDE_LOGICAL := my_product my_heytap my_company my_preload my_stock my_carrier my_region my_engineering my_manifest
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
