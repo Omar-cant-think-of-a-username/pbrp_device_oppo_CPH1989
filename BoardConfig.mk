@@ -114,7 +114,6 @@ BOARD_ROOT_EXTRA_FOLDERS := metadata my_product my_heytap my_company my_preload 
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_DENSITY := 480
-# Statusbar icons flags
 TW_STATUS_ICONS_ALIGN := center
 
 # Hack: prevent anti rollback
@@ -155,7 +154,7 @@ RECOVERY_SDCARD_ON_DATA := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TW_EXCLUDE_APEX := true
-TARGET_USES_MKE2FS := true
+TARGET_USES_MKE2FS := false
 TW_USE_UFS := true
 # TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
