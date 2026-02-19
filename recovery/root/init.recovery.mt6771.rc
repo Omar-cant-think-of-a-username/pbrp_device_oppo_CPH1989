@@ -130,9 +130,6 @@ on property:twrp.decrypt.done=true
     stop hwservicemanager
     stop keymaster-3-0
     stop gatekeeper-1-0
-    #test
-    stop keystore
-    stop keystore2
     
 on property:enable.fbe.service=0
     stop hal_cryptoeng_oppo
