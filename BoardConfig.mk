@@ -183,7 +183,7 @@ SHRP_FONP_3 := "/proc/qcom_flash"
 SHRP_FLASH_MAX_BRIGHTNESS := 1
 SHRP_REC := "/dev/block/by-name/recovery"
 SHRP_EXPRESS := true
-SHRP_EXPRESS_USE_DATA := false
+SHRP_EXPRESS_USE_DATA := true
 SHRP_DEVICE_TYPE := "A/B"
 SHRP_REC_TYPE := "Normal"
 
