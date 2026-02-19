@@ -6,7 +6,6 @@ on early-init
     restorecon /postinstall
 
     start ueventd
-   # start healthd
 
    # setprop sys.usb.configfs 0
 
@@ -42,7 +41,7 @@ on init
     mkdir /acct/uid
 
     mkdir /sdcard
-    mkdir /external_sd
+    #mkdir /external_sd
     #Shuangquan.Du@PSW.AD.Recovery.0, 2018/07/21, Add for usb otg
     mkdir /usb_otg
     mkdir /system
@@ -63,11 +62,6 @@ on init
     exec /sbin/e2fsck -y /dev/block/platform/mtk-msdc.0/by-name/userdata
 
 
-    #ifndef VENDOR_EDIT
-    #Yang.Li@ANDROID.STORAGE, 2017/12/19, Remove for can't umount /vendor in OTA update
-    #mount ext4 /dev/block/platform/bootdevice/by-name/vendor  /vendor rw
-    #mount ext4 /dev/block/platform/bootdevice/by-name/system  /system rw
-    #endif /* VENDOR_EDIT */
     #ifdef OPLUS_FEATURE_PHOENIX_RECOVERY
     start phoenix_recovery
     #endif
@@ -111,8 +105,6 @@ on late-init
     trigger early-boot
     trigger boot
 
-#on property:sys.powerctl=*
-#   powerctl ${sys.powerctl}
 
 service console /system/bin/sh
     class core
@@ -131,8 +123,6 @@ service ueventd /system/bin/ueventd
     critical
     seclabel u:r:recovery:s0
 
-# service healthd /system/bin/android.hardware.health@2.1-service -r
-#    seclabel u:r:recovery:s0
 
 service charger /system/bin/charger
     seclabel u:r:recovery:s0
@@ -258,48 +248,3 @@ on property:sys.usb.config=fastboot && property:sys.usb.ffs.ready=1 && property:
     setprop sys.usb.state ${sys.usb.config}
 
 
-
-
-#xiaofan.yang@PSW.TECH.AgingTest, 2019/02/14,Add for factory agingtest
-#ifdef COLOROS_EDIT
-#Zhengkang.Ji@Plf.Framework, 2018.02.10 add for system repair
-service wmt_loader /vendor/bin/wmt_loader
-    class main
-    user system
-    group system
-    oneshot
-    seclabel u:r:recovery:s0
-
-service wmt_launcher  /vendor/bin/wmt_launcher -p /vendor/firmware/
-    class main
-    user system
-    group system
-    oneshot
-    seclabel u:r:recovery:s0
-
-service netd /system/bin/netd
-    class main
-    socket netd stream 0660 root system
-    socket dnsproxyd stream 0660 root inet
-    socket mdns stream 0660 root system
-    socket fwmarkd stream 0660 root inet
-
-
-service vndservicemanager /vendor/bin/vndservicemanager /dev/vndbinder
-    writepid /dev/cpuset/system-background/tasks
-    seclabel u:r:recovery:s0
-
-service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
-    -Dnl80211 -iwlan0 -dd -O/data/misc/wifi/sockets \
-    -c/data/misc/wifi/wpa_supplicant.conf
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
-
-on property:recovery.reload.persist=trigger_reload_persist
-    load_persist_props
-
-on property:vendor.connsys.driver.ready=yes
-   insmod /vendor/lib/modules/wmt_chrdev_wifi.ko
-   insmod /vendor/lib/modules/wlan_drv_gen3.ko
-   insmod /vendor/lib/modules/wlan_drv_gen4m.ko
