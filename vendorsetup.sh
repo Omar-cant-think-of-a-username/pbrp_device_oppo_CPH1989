@@ -55,7 +55,6 @@ export FOX_USE_NANO_EDITOR="1"
 export FOX_USE_XZ_UTILS="1"
 
 #reduce the size for booting
-export FOX_REMOVE_AAPT="0"
 export FOX_REMOVE_BASH="1"
 
 # for oppo/realme ozip decryption
@@ -75,6 +74,7 @@ export FOX_MAINTAINER_PATCH_VERSION="1"
 export OF_SCREEN_H="2340"
 export OF_STATUS_INDENT_LEFT="73"
 export OF_STATUS_INDENT_RIGHT="73"
+export OF_STATUS_H="74"
 export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
 export FOX_MISCELLANEOUS_ROOT_DIRECTORY="/data/media/OFRP"
 export OF_QUICK_BACKUP_LIST="/boot;/storage;"
