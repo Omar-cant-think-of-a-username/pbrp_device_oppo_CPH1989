@@ -80,7 +80,7 @@ export FOX_MAINTAINER_PATCH_VERSION="1"
 export OF_SCREEN_H="2340"
 export OF_STATUS_INDENT_LEFT="73"
 export OF_STATUS_INDENT_RIGHT="73"
-export OF_STATUS_H="75"
+export OF_STATUS_H="73"
 
 # Decryption and format data
 export FOX_ALLOW_EARLY_SETTINGS_LOAD="1"
