@@ -12,7 +12,7 @@ on early-init
 on init
     export PATH /sbin:/system/bin
     export ANDROID_ROOT /system
-    export ANDROID_DATA /data
+    #export ANDROID_DATA /data
    #export EXTERNAL_STORAGE /sdcard
 
     symlink /proc/self/fd/0 /dev/stdin
