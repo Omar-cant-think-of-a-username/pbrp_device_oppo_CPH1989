@@ -62,9 +62,7 @@ on init
     exec /sbin/e2fsck -y /dev/block/platform/mtk-msdc.0/by-name/userdata
 
 
-    #ifdef OPLUS_FEATURE_PHOENIX_RECOVERY
-    start phoenix_recovery
-    #endif
+   
 on boot
     ifup lo
     hostname localhost
@@ -113,11 +111,6 @@ service console /system/bin/sh
     group shell log readproc
     seclabel u:r:recovery:s0
 
-#ifdef OPLUS_FEATURE_PHOENIX_RECOVERY
-service phoenix_recovery /system/bin/phoenix_recovery
-    critical
-    seclabel u:r:recovery:s0
-#endif /* OPLUS_FEATURE_PHOENIX_RECOVERY */
 
 service ueventd /system/bin/ueventd
     critical
