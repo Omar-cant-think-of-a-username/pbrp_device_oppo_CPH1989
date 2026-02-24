@@ -66,6 +66,8 @@ service keymaster-3-0 /system/bin/android.hardware.keymaster@3.0-service.truston
     disabled
     seclabel u:r:recovery:s0
 
+service charger /system/bin/charger
+    seclabel u:r:recovery:s0
 
 service hwservicemanager /system/bin/hwservicemanager
     onrestart setprop hwservicemanager.ready false
