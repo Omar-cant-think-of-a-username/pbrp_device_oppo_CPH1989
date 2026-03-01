@@ -142,16 +142,6 @@ on property:enable.fbe.service=0
     stop gatekeeperd
     stop gatekeeper-1-0  
 
-#test!!
-#on property:orangefox.rom.sdk=30 && property:ro.debuggable=0
-#    stop hal_cryptoeng_oppo
-#    stop mobicore
-#    stop servicemanager
-#    stop hwservicemanager
-#    stop keymaster-3-0
-#    stop gatekeeper-1-0
-#    stop keystore2
-
 
 
 on boot
