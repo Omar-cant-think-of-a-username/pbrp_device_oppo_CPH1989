@@ -144,7 +144,7 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 #TW_NO_BATT_PERCENT := false enabled by default
 #decrease size
 TW_EXCLUDE_NANO := true
-TW_USE_TOOLBOX := false
+TW_USE_TOOLBOX := true
 TW_OZIP_DECRYPT_KEY := ACAC1E13A72431AE4A1B22BBA1C1C6A2
 
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
@@ -152,9 +152,8 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 #TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_USE_LEGACY_BATTERY_SERVICES := true
 RECOVERY_SDCARD_ON_DATA := true
-#reduce size
-TWRP_INCLUDE_LOGCAT := false
-TARGET_USES_LOGD := false
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 TW_EXCLUDE_APEX := true
 TARGET_USES_MKE2FS := true
 TW_USE_UFS := true
@@ -184,10 +183,8 @@ SHRP_FONP_2 := /system/flashlight/brightness
 SHRP_FONP_3 := "/proc/qcom_flash"
 SHRP_FLASH_MAX_BRIGHTNESS := 1
 SHRP_REC := "/dev/block/by-name/recovery"
-SHRP_EXPRESS := false
-#SHRP_EXPRESS_USE_DATA := true
-#decrease the size
-SHRP_LITE := true
+SHRP_EXPRESS := true
+SHRP_EXPRESS_USE_DATA := true
 SHRP_DEVICE_TYPE := "A/B"
 SHRP_REC_TYPE := "Normal"
 
