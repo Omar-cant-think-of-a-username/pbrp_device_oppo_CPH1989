@@ -11,6 +11,7 @@ DEVICE_PATH := device/oppo/CPH1989
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -132,37 +133,39 @@ TW_PREPARE_DATA_MEDIA_EARLY := true
 # TWRP Configuration
 TW_DEVICE_VERSION := Omar&SeifHecker2099
 TW_THEME := portrait_hdpi
-#attempt to decrease size
-TW_EXTRA_LANGUAGES := false
+TW_EXTRA_LANGUAGES := true
+TW_DEFAULT_LANGUAGE := en
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_DEFAULT_BRIGHTNESS := 531
 TW_MAX_BRIGHTNESS := 1023
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
-#TW_EXCLUDE_ENCRYPTED_BACKUPS := true
-#TW_NO_BATT_PERCENT := false enabled by default
-#decrease size
-TW_EXCLUDE_NANO := true
-TW_USE_TOOLBOX := true
 TW_OZIP_DECRYPT_KEY := ACAC1E13A72431AE4A1B22BBA1C1C6A2
 
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-#TW_INTERNAL_STORAGE_PATH := "/data/media/0"  
-#TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_USE_LEGACY_BATTERY_SERVICES := true
 RECOVERY_SDCARD_ON_DATA := true
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
 TW_EXCLUDE_APEX := true
 TARGET_USES_MKE2FS := true
 TW_USE_UFS := true
-# TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
-BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
-TW_DEFAULT_LANGUAGE := en
+TW_USE_TOOLBOX := true
 #essential for booting 12.1
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
+
+# Debugging
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
+# Experemental flags
+#TW_EXCLUDE_ENCRYPTED_BACKUPS := true
+#TW_EXCLUDE_TWRPAPP := false
+#TW_INCLUDE_NTFS_3G := true
+#TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
+#TW_EXCLUDE_NANO := true
+#TW_INTERNAL_STORAGE_PATH := "/data/media/0"  
+#TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 
 # PBRP specific build flags
 PB_TORCH_PATH := "/proc/qcom_flash"
