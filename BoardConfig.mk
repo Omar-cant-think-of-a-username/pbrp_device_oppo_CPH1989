@@ -133,7 +133,7 @@ TW_PREPARE_DATA_MEDIA_EARLY := true
 # TWRP Configuration
 TW_DEVICE_VERSION := Omar&SeifHecker2099
 TW_THEME := portrait_hdpi
-TW_EXTRA_LANGUAGES := true
+TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := en
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_DEFAULT_BRIGHTNESS := 531
@@ -162,7 +162,7 @@ TARGET_USES_LOGD := true
 #TW_EXCLUDE_TWRPAPP := false
 #TW_INCLUDE_NTFS_3G := true
 #TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
-#TW_EXCLUDE_NANO := true
+TW_EXCLUDE_NANO := true
 #TW_INTERNAL_STORAGE_PATH := "/data/media/0"  
 #TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 #BOARD_USES_MTP := true
