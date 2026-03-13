@@ -53,7 +53,6 @@ export FOX_USE_XZ_UTILS="1"
 
 #reduce the size for booting
 export FOX_REMOVE_BASH="1"
-export FOX_DRASTIC_SIZE_REDUCTION="1"
 
 #settings
 export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
