@@ -95,6 +95,13 @@ fi
 #OF_BIND_MOUNT_SDCARD_ON_FORMAT=1
 #OF_SKIP_FBE_DECRYPTION_SDKVERSION=36
 #OF_SPLASH_MAX_SIZE
+#"FOX_ENABLE_KERNELSU_SUPPORT"
+#"FOX_ENABLE_KERNELSU_NEXT_SUPPORT"
+#"FOX_ENABLE_SUKISU_SUPPORT"
+#   - set this to 1 to add support for installing KernelSU to the OrangeFox addons; the 'ksud' binary (2.3mb in size) will also be installed if not already there
+#   - this can only work on VirtualAB devices whose ROMs use supported 5.x and 6.6 GKI kernels; don't try it on any other system - it simply will not work
+#   -   *Note*: this will use an extra 2.5mb of storage in the recovery ramdisk (inclusive of the 'ksud' binary); so, do NOT use this if recovery space is limited,
+#   -    otherwise the recovery might not boot at all (eg, blank screen), even if it builds successfully
+#   - default = 0
 
-#
 
