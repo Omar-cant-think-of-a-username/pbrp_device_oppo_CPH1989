@@ -26,7 +26,7 @@
 /proinfo           emmc      /dev/block/platform/bootdevice/by-name/proinfo                    flags=display="Proinfo";backup=1
 
 # testing odm
-#/odm              emmc      /dev/block/platform/bootdevice/by-name/odm                        flags=backup=1;display="Odm";flashimg=1
+/odm              emmc      /dev/block/platform/bootdevice/by-name/odm                        flags=backup=1;display="Odm";flashimg=1
 
 /seccfg            emmc      /dev/block/platform/bootdevice/by-name/seccfg
 /spmfw             emmc      /dev/block/platform/bootdevice/by-name/spmfw                      flags=display="Spm";backup=1
